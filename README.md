@@ -1,15 +1,15 @@
 Hi 👋 My name is Siraphop Sukchu
 ================================
 
-Discord Developer
+Discord and Roblox Developer
 -----------------
 
 I've been learning javascript for 2 years
 
 * 🌍  I'm based in Bangkok, Thailand
-* 🖥️  See my portfolio at [My site](http://https://bit.ly/Siraphop-Sukchu)
+* 🖥️  See my portfolio at [My site](https://fujatyping.github.io)
 * ✉️  You can contact me at [siraphopsukchu.ydev@gmail.com](mailto:siraphopsukchu.ydev@gmail.com)
-* 🚀  I'm currently working on [MAO-Bot](http://https://bit.ly/MAO5263)
+* 🚀  I'm currently working on [Maoyumi-Bot](https://discord.com/api/oauth2/authorize?client_id=1060182470630330529&permissions=8&scope=bot%20applications.commands)
 * 🧠  I'm learning javascript
 
 ### Skills
