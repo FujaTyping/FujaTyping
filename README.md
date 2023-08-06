@@ -1,13 +1,21 @@
-Hi 👋 My name is Siraphop Sukchu
-================================
+<p align="center"> <img src="https://cdn.discordapp.com/attachments/1071401485239332864/1137583046959308820/New_Project.png" alt="fujatyping" /> </p>
+<h1 align="center">Hi 👋, I'm Siraphop Sukchu</h1>
+<h3 align="center">🌐 A web developer from Thailand</h3>
 
-Discord and Roblox Developer
------------------
+- 🔭 I’m currently working on [Masayuki](https://github.com/FujaTyping/Masayuki)
 
-I've been learning javascript for 2 years
+- 🌱 I’m currently learning **React**
 
-* 🌍  I'm based in Bangkok, Thailand
-* 🖥️  See my portfolio at [My site](https://fujatyping.dev)
-* ✉️  You can contact me at [me@fujatyping.dev](mailto:me@fujatyping.dev)
-* 🚀  I'm currently working on [Masayuki](https://github.com/fujatyping/Masayuki)
-* 🧠  I'm learning React
+- 📫 How to reach me **me@fujatyping.dev**
+
+<details align="center">
+<summary style="font-weight: bold; font-size: 18px">🏆 Status</summary>
+<br>
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=fujatyping&show_icons=true&theme=dark&locale=en&layout=compact" alt="fujatyping" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=fujatyping&show_icons=true&theme=dark&locale=en" alt="fujatyping" /></p>
+</details>
+
+##
+
+<p align="center"> <img src="https://moe-counter.glitch.me/get/@FJT?theme=rlue34" alt="fujatyping" /> </p>
