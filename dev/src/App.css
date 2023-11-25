@@ -1,0 +1,63 @@
+* {
+    font-family: Prompt;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.headder {
+    background-image: url('./assets/background/Head-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.skiller {
+    background-image: url('./assets/background/Skill-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.projecter {
+    background-image: url('./assets/background/Project-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.quoter {
+    background-image: url('./assets/background/Quote-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title {
+    font-family: Anton !important;
+    font-size: 45px !important;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    margin-right: 15px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.skill {
+    margin-right: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.projects {
+    margin-bottom: 30px !important;
+}
+
+.card-details {
+    text-align: left;
+}
