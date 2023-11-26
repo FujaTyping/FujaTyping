@@ -7,7 +7,7 @@ html {
 }
 
 .headder {
-    background-image: url('./assets/background/Head-hero.png');
+    background-image: url('./assets/background/Head-hero.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -21,7 +21,7 @@ html {
 }
 
 .projecter {
-    background-image: url('./assets/background/Project-hero.png');
+    background-image: url('./assets/background/Project-hero.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
