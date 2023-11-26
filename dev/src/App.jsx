@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import './index.css'
+import 'animate.css';
 
 /* Components */
 import Footer from './components/Footer'
@@ -12,10 +13,11 @@ import Dialog from './components/Dialog'
 import icon from './assets/icon.png'
 import dividerSec from './assets/Quote-divider.png'
 
+
 function App() {
   return (
     <>
-      <div className="hero min-h-screen bg-base-200 headder">
+      <div className="hero min-h-screen bg-base-200 headder animate__animated animate__fadeIn animate__delay-0.5s">
         <div className="hero-content flex-col lg:flex-row">
           <img src={icon} className="max-w-sm shadow-2xl rounded-full profile" /><br />
           <div>
@@ -23,7 +25,7 @@ function App() {
             <p className="py-6">Hi ! , I'm <b>Siraphop Sukchu</b> you can simply call me <b>Fujatyping</b></p>
             <div className="join">
               <a href='https://project.fujatyping.dev/' className="btn join-item btn-outline btn-primary"><span className="material-symbols-outlined">tactic</span>My project</a>
-              <button onClick={()=>document.getElementById('contract-model').showModal()} className="btn join-item btn-neutral"><span className="material-symbols-outlined">deskphone</span>Contract me</button>
+              <button onClick={() => document.getElementById('contract-model').showModal()} className="btn join-item btn-neutral"><span className="material-symbols-outlined">deskphone</span>Contract me</button>
             </div>
           </div>
         </div>
