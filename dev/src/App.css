@@ -2,6 +2,10 @@
     font-family: Prompt;
 }
 
+.Science {
+    font-family: Tektur !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -29,6 +33,13 @@ html {
 
 .quoter {
     background-image: url('./assets/background/Quote-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Notfounder {
+    background-image: url('./assets/background/Hero-Notfound.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

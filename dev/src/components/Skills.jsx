@@ -1,47 +1,57 @@
 import React from 'react'
 
+/* Assets */
+import Python from '../assets/Icon/Python.svg'
+import Javascript from '../assets/Icon/Javascript.svg'
+import Cplusplus from '../assets/Icon/Cplusplus.svg'
+import ReactIcon from '../assets/Icon/React.svg'
+import Nodejs from '../assets/Icon/Nodejs.svg'
+import Firebase from '../assets/Icon/Firebase.svg'
+import Css from '../assets/Icon/Css.svg'
+import Html from '../assets/Icon/Html.svg'
+
 function Skills() {
     return (
         <>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" />
+                    <img src={Python} />
                 </div>
             </div>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" />
+                    <img src={Javascript} />
                 </div>
             </div>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" />
+                    <img src={Cplusplus} />
                 </div>
             </div>
             <div style={{ marginBottom: "10px" }} className="avatar">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" />
+                    <img src={ReactIcon} />
                 </div>
             </div>
             <div className="divider lg:divider-horizontal"></div>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" />
+                    <img src={Nodejs} />
                 </div>
             </div>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" />
+                    <img src={Firebase} />
                 </div>
             </div>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" />
+                    <img src={Css} />
                 </div>
             </div>
             <div style={{ marginBottom: "10px" }} className="avatar">
                 <div className="w-16">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" />
+                    <img src={Html} />
                 </div>
             </div>
         </>
