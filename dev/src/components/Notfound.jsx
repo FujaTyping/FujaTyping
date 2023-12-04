@@ -29,7 +29,7 @@ function Notfound() {
           <div className="max-w-md">
             <span className="text-5xl font-bold Science" ref={Typing}></span>
             <p className="py-6">The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.</p>
-            <a href='/' className="btn btn-primary animate__animated animate__fadeInUp animate__delay-3s">Reconnect ...</a>
+            <a href='/' className="btn btn-primary">Reconnect ...</a>
           </div>
         </div>
       </div>
