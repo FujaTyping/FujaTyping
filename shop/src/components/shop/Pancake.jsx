@@ -122,7 +122,7 @@ function Pancake() {
         <dialog id="contract" className="modal">
           <div className="modal-box">
             <h3 className="font-bold text-lg">ช่องทางติดต่อ</h3>
-            <p className="py-4">โทรศัพท์ : 098-083-9098<br />ดิสคอร์ด : @fujatyping<br />ไอดีไลน์ : phantom_b<br />เว็ปไซต์ : shop.fujatyping.dev/pancake</p>
+            <p className="py-4">โทรศัพท์ : 098-083-9098<br />ดิสคอร์ด : fujatyping (Fujatyping#0148)<br />ไอดีไลน์ : phantom_b<br />เว็ปไซต์ : shop.fujatyping.dev/pancake</p>
           </div>
           <form method="dialog" className="modal-backdrop">
             <button>close</button>
