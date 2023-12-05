@@ -20,14 +20,14 @@ html {
 }
 
 .Notfounder {
-    background-image: url('./assets/background/Hero-Notfound.gif');
+    background-image: url('./assets/background/Hero-Notfound.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .Indexder {
-    background-image: url('./assets/background/Index-hero.gif');
+    background-image: url('./assets/background/Index-hero.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
