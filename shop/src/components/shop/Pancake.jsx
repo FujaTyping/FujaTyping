@@ -83,11 +83,11 @@ function Pancake() {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">สถานที รับของ *</span>
+                    <span className="label-text">สถานที รับของ (เวลา 07:00 - 07:40) *</span>
                   </label>
                   <div className="join join-vertical">
                     <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs" disabled />
-                    <input id='DecsPlace' placeholder="คำอธิบาย (เวลาที่รับของ หรือ ส่วนไหนของ รร.)" className="InputC join-item input input-bordered" required />
+                    <input id='DecsPlace' placeholder="คำอธิบาย (ส่วนไหนของ รร.)" className="InputC join-item input input-bordered" required />
                   </div>
                 </div>
                 <div className="form-control">
@@ -114,7 +114,7 @@ function Pancake() {
           <aside>
             <img width="50" height="50" src={Threechut}></img>
             <p className="font-bold">
-              โครงงาน - Meao แพนเค้ก <br />โรงเรียน หาดใหญ่วิทยาลัย
+              โครงงาน - Meao แพนเค้ก <br />โรงเรียน หาดใหญ่วิทยาลัย<br />โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102)
             </p>
             <p>ลิขสิทธิ์ © 2566 - สงวนลิขสิทธิ์ทั้งหมด</p>
           </aside>
