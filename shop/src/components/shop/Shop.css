@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+* {
+    font-family: Itim !important;
+}
+
+thai {
+    font-family: Sriracha !important;
+}
+
+.Gicon {
+    font-family: Material Symbols Outlined !important;
+}
+
+.InputC {
+    color: #160E09 !important;
+}
+
+.Headder {
+    background-image: url('../../assets/background/Head-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Formmer {
+    background-image: url('../../assets/background/Pancake-form.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

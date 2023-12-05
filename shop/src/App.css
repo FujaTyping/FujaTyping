@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.Gicon {
+    font-family: Material Symbols Outlined !important;
+}
+
 .Science {
     font-family: Tektur !important;
 }
