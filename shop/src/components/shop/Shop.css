@@ -30,3 +30,10 @@ thai {
     background-position: center;
     background-size: cover;
 }
+
+.Aboutter {
+    background-image: url('../../assets/background/About-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

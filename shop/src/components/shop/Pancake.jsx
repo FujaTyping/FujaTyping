@@ -7,6 +7,7 @@ import Logo from '../../assets/shop/Pancake.png'
 import Threechut from '../../assets/Icon/Yorwor.png'
 import DividerHero from '../../assets/Head-divider.png'
 import DividerFooter from '../../assets/Footer-divider.png'
+import Member from '../../assets/Picture/MemPancake.png'
 
 /* Javascript */
 import sendWebhook from '../javascript/SubmitPancake'
@@ -53,9 +54,9 @@ function Pancake() {
                 <button onClick={() => document.getElementById('contract').showModal()} className="btn btn-neutral join-item"><span className="material-symbols-outlined Gicon">
                   support_agent
                 </span>ติดต่อ</button>
-                <button className="btn btn-neutral join-item"><span className="material-symbols-outlined Gicon">
+                <a href='#About' className="btn btn-neutral join-item"><span className="material-symbols-outlined Gicon">
                   storefront
-                </span>เกี่ยวกับโครงงาน</button>
+                </span>เกี่ยวกับโครงงาน</a>
               </div>
             </div>
           </div>
@@ -87,7 +88,7 @@ function Pancake() {
                   </label>
                   <div className="join join-vertical">
                     <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs" disabled />
-                    <input id='DecsPlace' placeholder="คำอธิบาย (ส่วนไหนของ รร.)" className="InputC join-item input input-bordered" required />
+                    <input id='DecsPlace' placeholder="คำอธิบาย (รับของตรงไหน)" className="InputC join-item input input-bordered" required />
                   </div>
                 </div>
                 <div className="form-control">
@@ -104,6 +105,21 @@ function Pancake() {
                 </div>
                 <div className="form-control mt-6">
                   <button onClick={handleSubmit} className="btn btn-primary">ส่งคำสั่งชื้อ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='About' className="hero bg-base-200 Aboutter">
+          <div style={{ padding: '80px' }} className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 className="text-5xl font-bold"><thai>เกี่ยวกับโครงงาน</thai></h1>
+              <p className="py-6">โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102) - โรงเรียน หาดใหญ่วิทยาลัย (ม. 3/10)</p>
+              <div className="card lg:card-side bg-base-100 shadow-xl">
+                <figure><img src={Member} alt="Album" /></figure>
+                <div className="card-body">
+                  <h2 className="card-title">สมาชิก / เสนอครูประจำวิชา</h2>
+                  <p>ชุติเดช แซ่สั้น เลขที่ 1<br />ตฤบดี เดซะปราโมทย์ เลขที่ 4<br />สิรภพ สุขชู เลขที่ 17<br />ปวริศร์ สุขเล็ก เลขที่ 21</p>
                 </div>
               </div>
             </div>

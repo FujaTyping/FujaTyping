@@ -14,7 +14,7 @@ function sendWebhook() {
     const webhookUrl = `https://discord.com/api/webhooks/${key}`;
 
     const Warnal = document.getElementById("warninfo");
-    if (Name == "" && Number == "" && DecsPlace == "" && CallBack == "") {
+    if (Name == "" || Number == "" || DecsPlace == "" || CallBack == "") {
         Warnal.style.display = "block";
     } else {
         Warnal.style.display = "none";
