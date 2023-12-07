@@ -37,3 +37,10 @@ thai {
     background-position: center;
     background-size: cover;
 }
+
+.Producter {
+    background-image: url('../../assets/background/Product-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

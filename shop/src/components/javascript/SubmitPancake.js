@@ -5,16 +5,16 @@ import axios from 'axios'
 import dsft from './Secreat';
 
 function sendWebhook() {
-    const Name = document.getElementById("Name").value;
-    const Number = document.getElementById("Number").value;
-    const DecsPlace = document.getElementById("DecsPlace").value;
-    const CallBack = document.getElementById("CallBack").value;
+    const Name = document.getElementById("Name");
+    const Number = document.getElementById("Number");
+    const DecsPlace = document.getElementById("DecsPlace");
+    const CallBack = document.getElementById("CallBack");
 
     var key = dsft("1181506005461389323/-BesYBELUQUNsv_J8V7KM4hYv0_OvoOhnjKss0kzrB0pOxK5PEOMHAVYL-6TEtqub4Yb")
     const webhookUrl = `https://discord.com/api/webhooks/${key}`;
 
     const Warnal = document.getElementById("warninfo");
-    if (Name == "" || Number == "" || DecsPlace == "" || CallBack == "") {
+    if (Name.value == "" || Number.value == "" || DecsPlace.value == "" || CallBack.value == "") {
         Warnal.style.display = "block";
     } else {
         Warnal.style.display = "none";
@@ -23,22 +23,22 @@ function sendWebhook() {
             "embeds": [
                 {
                     "title": "➕ Meao แพนเค้ก - คำสั่งชื้อ",
-                    "description": `โรงเรียน หาดใหญ่วิทยาลัย - ${DecsPlace}`,
+                    "description": `โรงเรียน หาดใหญ่วิทยาลัย - ${DecsPlace.value}`,
                     "color": 16631457,
                     "fields": [
                         {
                             "name": "ชื่อผู้สั่งชื่อ",
-                            "value": `${Name}`,
+                            "value": `${Name.value}`,
                             "inline": true
                         },
                         {
-                            "name": "จำนวน",
-                            "value": `${Number} กล่อง`,
+                            "name": "สินค้า / จำนวน",
+                            "value": `${Number.value}`,
                             "inline": true
                         },
                         {
                             "name": "ช่องทางติดต่อกลับ",
-                            "value": `${CallBack}`,
+                            "value": `${CallBack.value}`,
                         }
                     ]
                 }
@@ -65,9 +65,14 @@ function sendWebhook() {
                         Swal.fire({
                             icon: 'success',
                             title: 'คำสั่งชื้อถูกส่งแล้ว !',
-                            text: `กรุณารอการตอบกลับทาง ช่องทางติดต่อที่ให้ไว้ (${CallBack})`,
+                            text: `กรุณารอการตอบกลับทาง ช่องทางติดต่อที่ให้ไว้ (${CallBack.value})`,
                             showConfirmButton: false,
                         })
+
+                        Name.value = ""
+                        Number.value = ""
+                        DecsPlace.value = ""
+                        CallBack.value = ""
                     })
                     .catch(error => {
                         Swal.fire({

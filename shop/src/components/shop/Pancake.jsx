@@ -8,6 +8,8 @@ import Threechut from '../../assets/Icon/Yorwor.png'
 import DividerHero from '../../assets/Head-divider.png'
 import DividerFooter from '../../assets/Footer-divider.png'
 import Member from '../../assets/Picture/MemPancake.png'
+import PancakeBan from '../../assets/banner/Pancake-banner.png'
+import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
 
 /* Javascript */
 import sendWebhook from '../javascript/SubmitPancake'
@@ -21,9 +23,10 @@ function Pancake() {
 
   React.useEffect(() => {
     const typed = new Typed(Typing.current, {
-      strings: ['เราทำ " แพนเค้ก "', '" แพนเค้ก " โฮมเมด อบสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร :D'],
+      strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด อบสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
       loop: true,
-      showCursor: false,
+      showCursor: true,
+      cursorChar: ' |',
       typeSpeed: 50,
       backDelay: 1500,
       backSpeed: 25,
@@ -61,12 +64,32 @@ function Pancake() {
             </div>
           </div>
         </div>
+        <div className="hero bg-base-100 Producter">
+          <div style={{ padding: '80px' }} className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด</thai></h1>
+              <p className="py-6">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท</p>
+              <div className="carousel w-full">
+                <div id="Pancake" className="carousel-item w-full">
+                  <img src={PancakeBan} className="w-full" />
+                </div>
+                <div id="Doughnut" className="carousel-item w-full">
+                  <img src={DoughnutBan} className="w-full" />
+                </div>
+              </div>
+              <div className="flex justify-center w-full py-2 gap-2">
+                <a href="#Pancake" className="btn btn-xs">{"<"} แพนเค้ก</a>
+                <a href="#Doughnut" className="btn btn-xs">โดนัท {">"}</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <img width='100%' src={DividerHero}></img>
         <div id='ShopingForm' className="hero bg-base-200 Formmer">
           <div style={{ paddingTop: '80px', paddingBottom: '80px' }} className="hero-content flex-col lg:flex-row-reverse">
             <div style={{ marginLeft: '20px' }} className="text-center lg:text-left">
               <h1 className="text-5xl font-bold"><thai>สั่งเลยวันนี้ !</thai></h1>
-              <p className="py-6" ref={Typing}></p>
+              <p className="py-6"><span ref={Typing}></span></p>
             </div>
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
               <div className="card-body">
@@ -78,9 +101,9 @@ function Pancake() {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">จำนวน (ตัวเลข) *</span>
+                    <span className="label-text">สินค้า / จำนวน (ตัวเลข) *<br />ตัวอย่าง : <kbd className="kbd kbd-sm">แพนเค้ก 1 , โดนัท 1</kbd></span>
                   </label>
-                  <input id='Number' placeholder="0" className="InputC input input-bordered" required />
+                  <input id='Number' placeholder="แพนเค้ก 0" className="InputC input input-bordered" required />
                 </div>
                 <div className="form-control">
                   <label className="label">
@@ -116,7 +139,7 @@ function Pancake() {
               <h1 className="text-5xl font-bold"><thai>เกี่ยวกับโครงงาน</thai></h1>
               <p className="py-6">โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102) - โรงเรียน หาดใหญ่วิทยาลัย (ม. 3/10)</p>
               <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img src={Member} alt="Album" /></figure>
+                <figure><img style={{ height: '100%' }} src={Member} alt="Album" /></figure>
                 <div className="card-body">
                   <h2 className="card-title">สมาชิก / เสนอครูประจำวิชา</h2>
                   <p>ชุติเดช แซ่สั้น เลขที่ 1<br />ตฤบดี เดซะปราโมทย์ เลขที่ 4<br />สิรภพ สุขชู เลขที่ 17<br />ปวริศร์ สุขเล็ก เลขที่ 21</p>
@@ -138,7 +161,7 @@ function Pancake() {
         <dialog id="contract" className="modal">
           <div className="modal-box">
             <h3 className="font-bold text-lg">ช่องทางติดต่อ</h3>
-            <p className="py-4">โทรศัพท์ : 098-083-9098<br />ดิสคอร์ด : fujatyping (Fujatyping#0148)<br />ไอดีไลน์ : phantom_b<br />เว็ปไซต์ : shop.fujatyping.dev/pancake</p>
+            <p className="py-4">โทรศัพท์ : 090-221-3635<br />ดิสคอร์ด : fujatyping (Fujatyping#0148)<br />ไอดีไลน์ : phantom_b<br />เว็ปไซต์ : shop.fujatyping.dev/pancake</p>
           </div>
           <form method="dialog" className="modal-backdrop">
             <button>close</button>
