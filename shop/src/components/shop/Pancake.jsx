@@ -87,20 +87,27 @@ function Pancake() {
               <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด <span className="badge badge-primary">ลดราคา !</span></thai></h1>
               <p className="py-6">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท <span className="badge badge-primary">แพนเค้ก : ลดเหลือ 20 ฿aht และ โดนัท : ลดเหลือ 25 ฿aht</span></p>
               <div className="carousel w-full">
-                <div id="Pancake" className="carousel-item w-full">
+                <div id="Pancake" className="carousel-item relative w-full">
                   <img src={PancakeBan} className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#AllPancake" className="btn btn-circle">❮</a>
+                    <a href="#Doughnut" className="btn btn-circle">❯</a>
+                  </div>
                 </div>
-                <div id="AllPancake" className="carousel-item w-full">
-                  <img src={AllPancakeBan} className="w-full" />
-                </div>
-                <div id="Doughnut" className="carousel-item w-full">
+                <div id="Doughnut" className="carousel-item relative w-full">
                   <img src={DoughnutBan} className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#Pancake" className="btn btn-circle">❮</a>
+                    <a href="#AllPancake" className="btn btn-circle">❯</a>
+                  </div>
                 </div>
-              </div>
-              <div className="flex justify-center w-full py-2 gap-2">
-                <a href="#Pancake" className="btn btn-xs">{"<"} แพนเค้ก</a>
-                <a href="#AllPancake" className="btn btn-xs">{"<"} แพนเค้ก 3 รส {">"}</a>
-                <a href="#Doughnut" className="btn btn-xs">โดนัท {">"}</a>
+                <div id="AllPancake" className="carousel-item relative w-full">
+                  <img src={AllPancakeBan} className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#Doughnut" className="btn btn-circle">❮</a>
+                    <a href="#Pancake" className="btn btn-circle">❯</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
