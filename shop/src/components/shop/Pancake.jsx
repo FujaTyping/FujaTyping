@@ -11,6 +11,7 @@ import DividerFooter from '../../assets/Footer-divider.png'
 import Member from '../../assets/Picture/MemPancake.png'
 import PancakeBan from '../../assets/banner/Pancake-banner.png'
 import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
+import AllPancakeBan from '../../assets/banner/AllPancake-banner.png'
 
 /* Javascript */
 import sendWebhook from '../javascript/SubmitPancake'
@@ -29,7 +30,7 @@ function Pancake() {
 
   React.useEffect(() => {
     const typed = new Typed(Typing.current, {
-      strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด อบสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
+      strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด ทำสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
       loop: true,
       showCursor: true,
       cursorChar: ' |',
@@ -51,7 +52,7 @@ function Pancake() {
   return (
     <>
       <div data-theme="meao">
-        <button onClick={Tophandle} id='TopButton' className="btn btn-circle btn-outline button-top animate__animated">
+        <button onClick={Tophandle} id='TopButton' className="btn btn-circle btn-outline button-top animate__animated animate__fadeInUpBig animeted-animation">
           <span className="material-symbols-outlined Gicon">
             vertical_align_top
           </span>
@@ -83,11 +84,14 @@ function Pancake() {
         <div className="hero bg-base-100 Producter">
           <div style={{ padding: '80px' }} className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด</thai></h1>
-              <p className="py-6">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท</p>
+              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด <span className="badge badge-primary">ลดราคา !</span></thai></h1>
+              <p className="py-6">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท <span className="badge badge-primary">แพนเค้ก : ลดเหลือ 20 ฿aht และ โดนัท : ลดเหลือ 25 ฿aht</span></p>
               <div className="carousel w-full">
                 <div id="Pancake" className="carousel-item w-full">
                   <img src={PancakeBan} className="w-full" />
+                </div>
+                <div id="AllPancake" className="carousel-item w-full">
+                  <img src={AllPancakeBan} className="w-full" />
                 </div>
                 <div id="Doughnut" className="carousel-item w-full">
                   <img src={DoughnutBan} className="w-full" />
@@ -95,6 +99,7 @@ function Pancake() {
               </div>
               <div className="flex justify-center w-full py-2 gap-2">
                 <a href="#Pancake" className="btn btn-xs">{"<"} แพนเค้ก</a>
+                <a href="#AllPancake" className="btn btn-xs">{"<"} แพนเค้ก 3 รส {">"}</a>
                 <a href="#Doughnut" className="btn btn-xs">โดนัท {">"}</a>
               </div>
             </div>

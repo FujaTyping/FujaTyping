@@ -52,3 +52,19 @@ thai {
     display: none;
     z-index: 1;
 }
+
+.animeted-animation {
+    -webkit-animation-duration: 1s !important;
+    animation-duration: 1s !important;
+    -webkit-animation-duration: var(--animate-duration) !important;
+    animation-duration: var(--animate-duration) !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+    -webkit-animation-name: fadeInUpBig !important;
+    animation-name: fadeInUpBig !important;
+}
+
+.Cardpic {
+    width: 100% !important;
+    height: 100% !important;
+}
