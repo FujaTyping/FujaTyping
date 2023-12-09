@@ -1,5 +1,6 @@
 import React from 'react'
 import Typed from 'typed.js';
+import 'animate.css';
 import './Shop.css'
 
 /* Assets */
@@ -13,10 +14,15 @@ import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
 
 /* Javascript */
 import sendWebhook from '../javascript/SubmitPancake'
+import { Check_scroll, GoTop } from '../javascript/ToTop'
 
 function Pancake() {
   const handleSubmit = () => {
     sendWebhook();
+  };
+
+  const Tophandle = () => {
+    GoTop();
   };
 
   const Typing = React.useRef(null);
@@ -32,14 +38,24 @@ function Pancake() {
       backSpeed: 25,
     });
 
+    window.onscroll = function () {
+      Check_scroll();
+    };
+
     return () => {
       typed.destroy();
+      window.onscroll = null;
     };
   }, []);
 
   return (
     <>
       <div data-theme="meao">
+        <button onClick={Tophandle} id='TopButton' className="btn btn-circle btn-outline button-top animate__animated">
+          <span className="material-symbols-outlined Gicon">
+            vertical_align_top
+          </span>
+        </button>
         <div className="hero min-h-screen bg-base-100 Headder animate__animated animate__fadeIn animate__delay-0.5s">
           <div className="hero-content text-center">
             <div className="max-w-md">
@@ -139,7 +155,7 @@ function Pancake() {
               <h1 className="text-5xl font-bold"><thai>เกี่ยวกับโครงงาน</thai></h1>
               <p className="py-6">โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102) - โรงเรียน หาดใหญ่วิทยาลัย (ม. 3/10)</p>
               <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img style={{ height: '100%' }} src={Member} alt="Album" /></figure>
+                <figure><img style={{ height: '100%', width: '100%' }} src={Member} alt="Album" /></figure>
                 <div className="card-body">
                   <h2 className="card-title">สมาชิก / เสนอครูประจำวิชา</h2>
                   <p>ชุติเดช แซ่สั้น เลขที่ 1<br />ตฤบดี เดซะปราโมทย์ เลขที่ 4<br />สิรภพ สุขชู เลขที่ 17<br />ปวริศร์ สุขเล็ก เลขที่ 21</p>
