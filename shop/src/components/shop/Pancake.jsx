@@ -143,7 +143,14 @@ function Pancake() {
                   </div>
                 </div>
                 <div className="form-control mt-6">
-                  <button onClick={handleSubmit} className="btn btn-primary">ส่งคำสั่งชื้อ</button>
+                  <div className="join join-vertical">
+                    <button onClick={() => document.getElementById('Add').showModal()} className="btn btn-secondary join-item"><span className="material-symbols-outlined Gicon">
+                      variable_add
+                    </span>ท็อปปปิ้ง เพิ่มเติม</button>
+                    <button onClick={handleSubmit} className="btn btn-primary join-item"><span className="material-symbols-outlined Gicon">
+                      shopping_basket
+                    </span>ส่งคำสั่งชื้อ</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -182,6 +189,40 @@ function Pancake() {
           <form method="dialog" className="modal-backdrop">
             <button>close</button>
           </form>
+        </dialog>
+        <dialog id="Add" className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">ท็อปปปิ้ง เพิ่มเติม (ไม่ใส่ไม่ต้องติก)</h3>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">ซ็อกโกแลตชิพ</span>
+                <input id='CheckChoco' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">เรนโบว์ (แบบยาว)</span>
+                <input id='CheckRain' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">เยลลี้ เชอรี่</span>
+                <input id='CheckJelly' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">มาร์ชเมลโล</span>
+                <input id='CheckMash' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="modal-action">
+              <form method="dialog">
+                <button className="btn">ตกลง</button>
+              </form>
+            </div>
+          </div>
         </dialog>
       </div>
     </>

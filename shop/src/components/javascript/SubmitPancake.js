@@ -4,11 +4,25 @@ import axios from 'axios'
 /* JS */
 import dsft from './Secreat';
 
+function isCheck(elements) {
+    if (elements.checked) {
+        return "✅"
+    } else {
+        return "❌"
+    }
+}
+
 function sendWebhook() {
     const Name = document.getElementById("Name");
     const Number = document.getElementById("Number");
     const DecsPlace = document.getElementById("DecsPlace");
     const CallBack = document.getElementById("CallBack");
+
+    const ToppingChoco = document.getElementById("CheckChoco");
+    const ToppingRain = document.getElementById("CheckRain");
+    const ToppingJelly = document.getElementById("CheckJelly");
+    const ToppingMash = document.getElementById("CheckMash");
+
 
     var key = dsft("1181506005461389323/-BesYBELUQUNsv_J8V7KM4hYv0_OvoOhnjKss0kzrB0pOxK5PEOMHAVYL-6TEtqub4Yb")
     const webhookUrl = `https://discord.com/api/webhooks/${key}`;
@@ -34,6 +48,11 @@ function sendWebhook() {
                         {
                             "name": "สินค้า / จำนวน",
                             "value": `${Number.value}`,
+                            "inline": true
+                        },
+                        {
+                            "name": "ท็อปปิ้ง",
+                            "value": `ซ็อกโกแลตชิพ : ${isCheck(ToppingChoco)}\nเรนโบว์ (แบบยาว) : ${isCheck(ToppingRain)}\nเยลลี้ เชอรี่ : ${isCheck(ToppingJelly)}\nมาร์ชเมลโล : ${isCheck(ToppingMash)}`,
                             "inline": true
                         },
                         {
@@ -73,6 +92,11 @@ function sendWebhook() {
                         Number.value = ""
                         DecsPlace.value = ""
                         CallBack.value = ""
+
+                        ToppingChoco.checked = false
+                        ToppingJelly.checked = false
+                        ToppingMash.checked = false
+                        ToppingRain.checked = false
                     })
                     .catch(error => {
                         Swal.fire({
