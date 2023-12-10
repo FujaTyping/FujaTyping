@@ -71,8 +71,10 @@ function sendWebhook() {
             color: "#160E09",
             background: "#fdc6a1",
             showDenyButton: true,
-            confirmButtonText: "<e class='Itimfont'>ส่งเลย</e>",
-            denyButtonText: `<e class='Itimfont'>คิดดูก่อน</e>`,
+            confirmButtonText: "<e class='Itimfont Firecolor'>ส่งเลย</e>",
+            denyButtonText: `<e class='Itimfont Firecolor'>คิดดูก่อน</e>`,
+            confirmButtonColor: '#eda779',
+            denyButtonColor: '#d49881',
             preConfirm: async (Send) => {
                 Swal.fire({
                     icon: 'warning',
