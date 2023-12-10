@@ -66,16 +66,20 @@ function sendWebhook() {
 
         Swal.fire({
             icon: 'question',
-            title: 'ต้องการส่งคำสั่งชื้อจริงๆใช่ไหม ?',
-            text: "ถ้ากดส่งแล้วจะแก้คำสั่งชื้อไม่ได้นะ !",
+            title: '<thai>ต้องการส่งคำสั่งชื้อจริงๆใช่ไหม ?</thai>',
+            html: "<e class='Itimfont'>ถ้ากดส่งแล้วจะแก้คำสั่งชื้อไม่ได้นะ !</e>",
+            color: "#160E09",
+            background: "#fdc6a1",
             showDenyButton: true,
-            confirmButtonText: "ส่งเลย",
-            denyButtonText: `คิดดูก่อน`,
+            confirmButtonText: "<e class='Itimfont'>ส่งเลย</e>",
+            denyButtonText: `<e class='Itimfont'>คิดดูก่อน</e>`,
             preConfirm: async (Send) => {
                 Swal.fire({
                     icon: 'warning',
-                    title: 'กำลังส่งคำสั่งชื้อ ...',
-                    text: `กรุณารอสักครู่`,
+                    title: '<thai>กำลังส่งคำสั่งชื้อ ...</thai>',
+                    html: "<e class='Itimfont'>กรุณารอสักครู่</e>",
+                    color: "#160E09",
+                    background: "#fdc6a1",
                     showConfirmButton: false,
                 })
 
@@ -83,8 +87,10 @@ function sendWebhook() {
                     .then(response => {
                         Swal.fire({
                             icon: 'success',
-                            title: 'คำสั่งชื้อถูกส่งแล้ว !',
-                            text: `กรุณารอการตอบกลับทาง ช่องทางติดต่อที่ให้ไว้ (${CallBack.value})`,
+                            title: '<thai>คำสั่งชื้อถูกส่งแล้ว !</thai>',
+                            html: `<e class='Itimfont'>กรุณารอการตอบกลับทาง ช่องทางติดต่อที่ให้ไว้ (${CallBack.value})</e>`,
+                            color: "#160E09",
+                            background: "#fdc6a1",
                             showConfirmButton: false,
                         })
 
@@ -101,8 +107,10 @@ function sendWebhook() {
                     .catch(error => {
                         Swal.fire({
                             icon: 'error',
-                            title: 'ไม่สามารถส่งคำสั่งชื้อได้ :(',
-                            text: `${error}`,
+                            title: '<thai>ไม่สามารถส่งคำสั่งชื้อได้ :(</thai>',
+                            html: `<e class='Itimfont'>${error}</e>`,
+                            color: "#160E09",
+                            background: "#fdc6a1",
                             showConfirmButton: false,
                         })
                     });

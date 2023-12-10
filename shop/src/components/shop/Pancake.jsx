@@ -65,16 +65,16 @@ function Pancake() {
                   <img src={Logo} />
                 </div>
               </div>
-              <h1 className="text-5xl font-bold"><thai>Meao</thai> แพนเค้ก</h1>
-              <p className="py-6">แพนเค้ก " Meao แพนเค้ก " แพนเค้กโฮมเมด อบสดใหม่ทุกวัน ให้คุณได้สัมผัสรสชาติที่หอมกรุ่น อร่อยไม่เหมือนใคร แพนเค้กที่ถูกใจทุกคน สั่งเลยวันนี้</p>
+              <h1 className="text-5xl font-bold Itimfont"><thai>Meao</thai> แพนเค้ก</h1>
+              <p className="py-6 Itimfont">แพนเค้ก " Meao แพนเค้ก " แพนเค้กโฮมเมด อบสดใหม่ทุกวัน ให้คุณได้สัมผัสรสชาติที่หอมกรุ่น อร่อยไม่เหมือนใคร แพนเค้กที่ถูกใจทุกคน สั่งเลยวันนี้</p>
               <div className="join join-vertical lg:join-horizontal">
-                <a href='#ShopingForm' className="btn btn-secondary join-item"><span className="material-symbols-outlined Gicon">
+                <a href='#ShopingForm' className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   shopping_bag
                 </span>สั่งชื้อ</a>
-                <button onClick={() => document.getElementById('contract').showModal()} className="btn btn-neutral join-item"><span className="material-symbols-outlined Gicon">
+                <button onClick={() => document.getElementById('contract').showModal()} className="btn btn-neutral join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   support_agent
                 </span>ติดต่อ</button>
-                <a href='#About' className="btn btn-neutral join-item"><span className="material-symbols-outlined Gicon">
+                <a href='#About' className="btn btn-neutral join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   storefront
                 </span>เกี่ยวกับโครงงาน</a>
               </div>
@@ -84,8 +84,8 @@ function Pancake() {
         <div className="hero bg-base-100 Producter">
           <div style={{ padding: '80px' }} className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด <span className="badge badge-primary">ลดราคา !</span></thai></h1>
-              <p className="py-6">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท <span className="badge badge-primary">แพนเค้ก : ลดเหลือ 20 ฿aht และ โดนัท : ลดเหลือ 25 ฿aht</span></p>
+              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด <span className="badge badge-primary Itimfont">ลดราคา !</span></thai></h1>
+              <p className="py-6 Itimfont">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท <span className="badge badge-primary Itimfont">แพนเค้ก : ลดเหลือ 20 ฿aht และ โดนัท : ลดเหลือ 25 ฿aht</span></p>
               <div className="carousel w-full">
                 <div id="Pancake" className="carousel-item relative w-full">
                   <img src={PancakeBan} className="w-full" />
@@ -117,49 +117,49 @@ function Pancake() {
           <div style={{ paddingTop: '80px', paddingBottom: '80px' }} className="hero-content flex-col lg:flex-row-reverse">
             <div style={{ marginLeft: '20px' }} className="text-center lg:text-left">
               <h1 className="text-5xl font-bold"><thai>สั่งเลยวันนี้ !</thai></h1>
-              <p className="py-6"><span ref={Typing}></span></p>
+              <p className="py-6"><span className='Itimfont' ref={Typing}></span></p>
             </div>
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
               <div className="card-body">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">ชื่อผู้สั่งชื้อ (ภาษาไทย) *</span>
+                    <span className="label-text Itimfont">ชื่อผู้สั่งชื้อ (ภาษาไทย) *</span>
                   </label>
-                  <input id='Name' placeholder="ชื่อ" className="InputC input input-bordered" required />
+                  <input id='Name' placeholder="ชื่อ" className="InputC input input-bordered Itimfont" required />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">สินค้า / จำนวน (ตัวเลข) *<br />ตัวอย่าง : <kbd className="kbd kbd-sm">แพนเค้ก 1 , โดนัท 1</kbd></span>
+                    <span className="label-text Itimfont">สินค้า / จำนวน (ตัวเลข) *<br />ตัวอย่าง : <kbd className="kbd kbd-sm Itimfont">แพนเค้ก 1 , โดนัท 1</kbd></span>
                   </label>
-                  <input id='Number' placeholder="แพนเค้ก 0" className="InputC input input-bordered" required />
+                  <input id='Number' placeholder="แพนเค้ก 0" className="Itimfont InputC input input-bordered" required />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">สถานที รับของ (เวลา 07:00 - 07:40) *</span>
+                    <span className="label-text Itimfont">สถานที รับของ (เวลา 07:00 - 07:40) *</span>
                   </label>
                   <div className="join join-vertical">
-                    <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs" disabled />
-                    <input id='DecsPlace' placeholder="คำอธิบาย (รับของตรงไหน)" className="InputC join-item input input-bordered" required />
+                    <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs Itimfont" disabled />
+                    <input id='DecsPlace' placeholder="คำอธิบาย (รับของตรงไหน)" className="InputC join-item input input-bordered Itimfont" required />
                   </div>
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">ช่องทางติดต่อกลับ *</span>
+                    <span className="label-text Itimfont">ช่องทางติดต่อกลับ *</span>
                   </label>
-                  <input id='CallBack' placeholder="อีเมล , เบอร์โทร หรือ อื่นๆ" className="InputC input input-bordered" required />
+                  <input id='CallBack' placeholder="อีเมล , เบอร์โทร หรือ อื่นๆ" className="InputC input input-bordered Itimfont" required />
                 </div>
                 <div id='warninfo' style={{ display: 'none' }} className="form-control mt-6 animate__animated animate__shakeX">
                   <div role="alert" className="alert alert-error">
                     <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>กรุณากรอกข้อมูลให้ครบถ้วน !</span>
+                    <span className='Itimfont'>กรุณากรอกข้อมูลให้ครบถ้วน !</span>
                   </div>
                 </div>
                 <div className="form-control mt-6">
                   <div className="join join-vertical">
-                    <button onClick={() => document.getElementById('Add').showModal()} className="btn btn-secondary join-item"><span className="material-symbols-outlined Gicon">
+                    <button onClick={() => document.getElementById('Add').showModal()} className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       variable_add
                     </span>ท็อปปปิ้ง เพิ่มเติม</button>
-                    <button onClick={handleSubmit} className="btn btn-primary join-item"><span className="material-symbols-outlined Gicon">
+                    <button onClick={handleSubmit} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       shopping_basket
                     </span>ส่งคำสั่งชื้อ</button>
                   </div>
@@ -172,12 +172,12 @@ function Pancake() {
           <div style={{ padding: '80px' }} className="hero-content text-center">
             <div className="max-w-md">
               <h1 className="text-5xl font-bold"><thai>เกี่ยวกับโครงงาน</thai></h1>
-              <p className="py-6">โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102) - โรงเรียน หาดใหญ่วิทยาลัย (ม. 3/10)</p>
+              <p className="py-6 Itimfont">โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102) - โรงเรียน หาดใหญ่วิทยาลัย (ม. 3/10)</p>
               <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img style={{ height: '100%', width: '100%' }} src={Member} alt="Album" /></figure>
                 <div className="card-body">
-                  <h2 className="card-title">สมาชิก / เสนอครูประจำวิชา</h2>
-                  <p>ชุติเดช แซ่สั้น เลขที่ 1<br />ตฤบดี เดซะปราโมทย์ เลขที่ 4<br />สิรภพ สุขชู เลขที่ 17<br />ปวริศร์ สุขเล็ก เลขที่ 21</p>
+                  <h2 className="card-title Itimfont">สมาชิก / เสนอครูประจำวิชา</h2>
+                  <p className='Itimfont'>ชุติเดช แซ่สั้น เลขที่ 1<br />ตฤบดี เดซะปราโมทย์ เลขที่ 4<br />สิรภพ สุขชู เลขที่ 17<br />ปวริศร์ สุขเล็ก เลขที่ 21</p>
                 </div>
               </div>
             </div>
@@ -187,16 +187,16 @@ function Pancake() {
         <footer className="footer footer-center p-10 bg-primary text-primary-content">
           <aside>
             <img width="50" height="50" src={Threechut}></img>
-            <p className="font-bold">
+            <p className="font-bold Itimfont">
               โครงงาน - Meao แพนเค้ก <br />โรงเรียน หาดใหญ่วิทยาลัย<br />โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102)
             </p>
-            <p>ลิขสิทธิ์ © 2566 - สงวนลิขสิทธิ์ทั้งหมด</p>
+            <p className='Itimfont'>ลิขสิทธิ์ © 2566 - สงวนลิขสิทธิ์ทั้งหมด</p>
           </aside>
         </footer>
         <dialog id="contract" className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg">ช่องทางติดต่อ</h3>
-            <p className="py-4">โทรศัพท์ : 090-221-3635<br />ดิสคอร์ด : fujatyping (Fujatyping#0148)<br />ไอดีไลน์ : phantom_b<br />เว็ปไซต์ : shop.fujatyping.dev/pancake</p>
+            <h3 className="font-bold text-lg Itimfont">ช่องทางติดต่อ</h3>
+            <p className="py-4 Itimfont">โทรศัพท์ : 090-221-3635<br />ดิสคอร์ด : fujatyping (Fujatyping#0148)<br />ไอดีไลน์ : phantom_b<br />เว็ปไซต์ : shop.fujatyping.dev/pancake</p>
           </div>
           <form method="dialog" className="modal-backdrop">
             <button>close</button>
@@ -204,34 +204,34 @@ function Pancake() {
         </dialog>
         <dialog id="Add" className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg">ท็อปปปิ้ง เพิ่มเติม (ไม่ใส่ไม่ต้องติก)</h3>
+            <h3 className="font-bold text-lg Itimfont">ท็อปปปิ้ง เพิ่มเติม (ไม่ใส่ไม่ต้องติก)</h3>
             <div className="form-control">
               <label className="label cursor-pointer">
-                <span className="label-text">ซ็อกโกแลตชิพ</span>
+                <span className="label-text Itimfont">ซ็อกโกแลตชิพ</span>
                 <input id='CheckChoco' type="checkbox" className="checkbox" />
               </label>
             </div>
             <div className="form-control">
               <label className="label cursor-pointer">
-                <span className="label-text">เรนโบว์ (แบบยาว)</span>
+                <span className="label-text Itimfont">เรนโบว์ (แบบยาว)</span>
                 <input id='CheckRain' type="checkbox" className="checkbox" />
               </label>
             </div>
             <div className="form-control">
               <label className="label cursor-pointer">
-                <span className="label-text">เยลลี้ เชอรี่</span>
+                <span className="label-text Itimfont">เยลลี้ เชอรี่</span>
                 <input id='CheckJelly' type="checkbox" className="checkbox" />
               </label>
             </div>
             <div className="form-control">
               <label className="label cursor-pointer">
-                <span className="label-text">มาร์ชเมลโล</span>
+                <span className="label-text Itimfont">มาร์ชเมลโล</span>
                 <input id='CheckMash' type="checkbox" className="checkbox" />
               </label>
             </div>
             <div className="modal-action">
               <form method="dialog">
-                <button className="btn">ตกลง</button>
+                <button className="btn Itimfont">ตกลง</button>
               </form>
             </div>
           </div>
