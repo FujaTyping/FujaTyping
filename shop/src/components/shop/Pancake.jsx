@@ -1,6 +1,7 @@
 import React from 'react'
 import Typed from 'typed.js';
 import 'animate.css';
+import CountUp from 'react-countup';
 import './Shop.css'
 
 /* Assets */
@@ -180,6 +181,27 @@ function Pancake() {
                   <p className='Itimfont'>ชุติเดช แซ่สั้น เลขที่ 1<br />ตฤบดี เดซะปราโมทย์ เลขที่ 4<br />สิรภพ สุขชู เลขที่ 17<br />ปวริศร์ สุขเล็ก เลขที่ 21</p>
                 </div>
               </div>
+              <p className="py-6 Itimfont">สถิติ ทางการค้า :D<br />ตั้งแต่วันที่ 11 ธันวาคม 2566</p>
+              <div className="stats shadow stats-vertical lg:stats-horizontal">
+                <div className="stat">
+                  <div className="stat-figure text-secondary">
+                    <span style={{ fontSize: '35px' }} className="material-symbols-outlined Gicon">
+                      toc
+                    </span>
+                  </div>
+                  <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={1} delay={2} /></thai></div>
+                </div>
+                <div className="stat">
+                  <div className="stat-figure text-secondary">
+                    <span style={{ fontSize: '32.5px' }} className="material-symbols-outlined Gicon">
+                      inventory_2
+                    </span>
+                  </div>
+                  <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={44} delay={2} /></thai></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,7 +235,7 @@ function Pancake() {
             </div>
             <div className="form-control">
               <label className="label cursor-pointer">
-                <span className="label-text Itimfont">เรนโบว์ (แบบยาว)</span>
+                <span className="label-text Itimfont">เรนโบว์</span>
                 <input id='CheckRain' type="checkbox" className="checkbox" />
               </label>
             </div>
