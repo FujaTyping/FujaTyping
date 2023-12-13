@@ -190,7 +190,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={1} delay={2} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={1} delay={1} /></thai></div>
                 </div>
                 <div className="stat">
                   <div className="stat-figure text-secondary">
@@ -199,7 +199,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={44} delay={2} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={44} delay={1} /></thai></div>
                 </div>
               </div>
             </div>
@@ -231,6 +231,12 @@ function Pancake() {
               <label className="label cursor-pointer">
                 <span className="label-text Itimfont">ซ็อกโกแลตชิพ</span>
                 <input id='CheckChoco' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">ไวท์ซ็อกโกแลตชิพ</span>
+                <input id='CheckWChoco' type="checkbox" className="checkbox" />
               </label>
             </div>
             <div className="form-control">

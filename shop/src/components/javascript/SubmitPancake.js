@@ -22,6 +22,7 @@ function sendWebhook() {
     const ToppingRain = document.getElementById("CheckRain");
     const ToppingJelly = document.getElementById("CheckJelly");
     const ToppingMash = document.getElementById("CheckMash");
+    const ToppingWChoco = document.getElementById("CheckWChoco");
 
 
     var key = dsft("1181506005461389323/-BesYBELUQUNsv_J8V7KM4hYv0_OvoOhnjKss0kzrB0pOxK5PEOMHAVYL-6TEtqub4Yb")
@@ -52,7 +53,7 @@ function sendWebhook() {
                         },
                         {
                             "name": "ท็อปปิ้ง",
-                            "value": `ซ็อกโกแลตชิพ : ${isCheck(ToppingChoco)}\nเรนโบว์ (แบบยาว) : ${isCheck(ToppingRain)}\nเยลลี้ เชอรี่ : ${isCheck(ToppingJelly)}\nมาร์ชเมลโล : ${isCheck(ToppingMash)}`,
+                            "value": `ซ็อกโกแลตชิพ : ${isCheck(ToppingChoco)}\nไวท์ซ็อกโกแลตชิพ : ${isCheck(ToppingWChoco)}\nเรนโบว์ (แบบยาว) : ${isCheck(ToppingRain)}\nเยลลี้ เชอรี่ : ${isCheck(ToppingJelly)}\nมาร์ชเมลโล : ${isCheck(ToppingMash)}`,
                             "inline": true
                         },
                         {
@@ -105,6 +106,7 @@ function sendWebhook() {
                         ToppingJelly.checked = false
                         ToppingMash.checked = false
                         ToppingRain.checked = false
+                        ToppingWChoco.checked = false
                     })
                     .catch(error => {
                         Swal.fire({
