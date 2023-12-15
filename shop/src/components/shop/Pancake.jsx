@@ -3,6 +3,7 @@ import Typed from 'typed.js';
 import 'animate.css';
 import CountUp from 'react-countup';
 import './Shop.css'
+import 'https://tally.so/widgets/embed.js';
 
 /* Assets */
 import Logo from '../../assets/shop/Pancake.png'
@@ -206,13 +207,16 @@ function Pancake() {
           </div>
         </div>
         <img width='100%' src={DividerFooter}></img>
-        <footer className="footer footer-center p-10 bg-primary text-primary-content">
+        <footer id='Footer' className="footer footer-center p-10 bg-primary text-primary-content betterfotter">
           <aside>
             <img width="50" height="50" src={Threechut}></img>
             <p className="font-bold Itimfont">
               โครงงาน - Meao แพนเค้ก <br />โรงเรียน หาดใหญ่วิทยาลัย<br />โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102)
             </p>
             <p className='Itimfont'>ลิขสิทธิ์ © 2566 - สงวนลิขสิทธิ์ทั้งหมด</p>
+            <button data-tally-open="3qRl52" data-tally-emoji-animation="none" data-tally-auto-close="0" className="btn btn-secondary Itimfont" ><span className="material-symbols-outlined Gicon">
+              query_stats
+            </span>แบบสอบถามความพึงพอใจ</button>
           </aside>
         </footer>
         <dialog id="contract" className="modal">
