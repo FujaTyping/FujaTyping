@@ -14,6 +14,7 @@ import Member from '../../assets/Picture/MemPancake.png'
 import PancakeBan from '../../assets/banner/Pancake-banner.png'
 import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
 import AllPancakeBan from '../../assets/banner/AllPancake-banner.png'
+import AllFinalBan from '../../assets/banner/AllFinal-banner.png'
 
 /* Javascript */
 import { ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
@@ -90,13 +91,13 @@ function Pancake() {
         <div className="hero bg-base-100 Producter">
           <div style={{ padding: '80px' }} className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด <span className="badge badge-primary Itimfont">ลดราคา !</span></thai></h1>
-              <p className="py-6 Itimfont">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท <span className="badge badge-primary Itimfont">แพนเค้ก : ลดเหลือ 20 ฿aht และ โดนัท : ลดเหลือ 25 ฿aht</span></p>
+              <h1 className="text-5xl font-bold"><thai>สินค้าทั้งหมด</thai></h1>
+              <p className="py-6 Itimfont">ตอนนี้มีสินค้าอยู่ 2 ชนิด คือ แพนเค้ก กับ โดนัท</p>
               <div className="carousel w-full">
                 <div id="Pancake" className="carousel-item relative w-full">
                   <img src={PancakeBan} className="w-full" />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#AllPancake" className="btn btn-circle">❮</a>
+                    <a href="#AllFinal" className="btn btn-circle">❮</a>
                     <a href="#Doughnut" className="btn btn-circle">❯</a>
                   </div>
                 </div>
@@ -111,6 +112,13 @@ function Pancake() {
                   <img src={AllPancakeBan} className="w-full" />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#Doughnut" className="btn btn-circle">❮</a>
+                    <a href="#AllFinal" className="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <div id="AllFinal" className="carousel-item relative w-full">
+                  <img src={AllFinalBan} className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#AllPancake" className="btn btn-circle">❮</a>
                     <a href="#Pancake" className="btn btn-circle">❯</a>
                   </div>
                 </div>
@@ -291,9 +299,6 @@ function Pancake() {
             <p className="py-4 Itimfont">แป้งสาลี , นม , ถั่วเหลือง , ซัลไฟต์ และ ไข่<br /><br />กรุณาตรวจสอบว่าคุณหรือผู้ที่คุณบริโภคอาหารนี้เป็นผู้แพ้อาหารที่กล่าวถึง หากคุณไม่แน่ใจหรือมีคำถามเพิ่มเติมเกี่ยวกับส่วนประกอบของอาหาร กรุณาปรึกษาผู้เชี่ยวชาญด้านสุขภาพหรือหมอของคุณก่อนการบริโภคอาหารนี้ ความปลอดภัยของคุณคือสำคัญที่สุด!</p>
             <div className="modal-action">
               <button onClick={handleSubmit} className="btn btn-primary Itimfont">เข้าใจแล้ว</button>
-              <form method="dialog">
-                <button className="btn Itimfont">ปิด</button>
-              </form>
             </div>
           </div>
         </dialog>
