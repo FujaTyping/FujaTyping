@@ -277,7 +277,7 @@ function Pancake() {
             <h3 className="font-bold text-lg Itimfont">เตือน ! ข้อมูลสำหรับผู้แพ้อาหารดั้งนี้</h3>
             <p className="py-4 Itimfont">แป้งสาลี , นม , ถั่วเหลือง , ซัลไฟต์ และ ไข่<br /><br />กรุณาตรวจสอบว่าคุณหรือผู้ที่คุณบริโภคอาหารนี้เป็นผู้แพ้อาหารที่กล่าวถึง หากคุณไม่แน่ใจหรือมีคำถามเพิ่มเติมเกี่ยวกับส่วนประกอบของอาหาร กรุณาปรึกษาผู้เชี่ยวชาญด้านสุขภาพหรือหมอของคุณก่อนการบริโภคอาหารนี้ ความปลอดภัยของคุณคือสำคัญที่สุด!</p>
             <div className="modal-action">
-              <button onClick={handleSubmit} className="btn Itimfont">เข้าใจแล้ว</button>
+              <button onClick={handleSubmit} className="btn btn-primary Itimfont">เข้าใจแล้ว</button>
               <form method="dialog">
                 <button className="btn Itimfont">ปิด</button>
               </form>
