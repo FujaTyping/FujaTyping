@@ -169,6 +169,12 @@ function Pancake() {
                       shopping_basket
                     </span>ส่งคำสั่งชื้อ</button>
                   </div>
+                  <div style={{ marginTop: '15px' }} className="form-control">
+                    <label className="label cursor-pointer">
+                      <span className="label-text Itimfont">สั่งซื้อภายในคลิกเดี่ยว</span>
+                      <input id='CheckbyPass' type="checkbox" className="checkbox" />
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,6 +263,12 @@ function Pancake() {
               <label className="label cursor-pointer">
                 <span className="label-text Itimfont">เยลลี้ เชอรี่</span>
                 <input id='CheckJelly' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">เยลลี้ บลูเบอรี่</span>
+                <input id='CheckBlueJelly' type="checkbox" className="checkbox" />
               </label>
             </div>
             <div className="form-control">
