@@ -240,7 +240,8 @@ function Pancake() {
         </dialog>
         <dialog id="Add" className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg Itimfont">ท็อปปปิ้ง เพิ่มเติม (ไม่ใส่ไม่ต้องติก)</h3>
+            <h3 className="font-bold text-lg Itimfont">ท็อปปิ้ง เพิ่มเติม (ไม่ใส่ไม่ต้องติก)</h3>
+            <p className="py-4 Itimfont">ฟรี 1 อย่าง , หลังจากนั้นอันละ 3 บาท</p>
             <div className="form-control">
               <label className="label cursor-pointer">
                 <span className="label-text Itimfont">ซ็อกโกแลตชิพ</span>
