@@ -12,6 +12,25 @@ function isCheck(elements) {
     }
 }
 
+let noCon = 0
+
+function ConfirmWebhook() {
+    const Name = document.getElementById("Name");
+    const Number = document.getElementById("Number");
+    const DecsPlace = document.getElementById("DecsPlace");
+    const CallBack = document.getElementById("CallBack");
+
+    const Warnal = document.getElementById("warninfo");
+    if (Name.value == "" || Number.value == "" || DecsPlace.value == "" || CallBack.value == "") {
+        Warnal.style.display = "block";
+        noCon = 0
+    } else {
+        document.getElementById('SubmitConfirm').showModal()
+        Warnal.style.display = "none";
+        noCon = 1
+    }
+}
+
 function sendWebhook() {
     const Name = document.getElementById("Name");
     const Number = document.getElementById("Number");
@@ -28,11 +47,8 @@ function sendWebhook() {
     var key = dsft("1181506005461389323/-BesYBELUQUNsv_J8V7KM4hYv0_OvoOhnjKss0kzrB0pOxK5PEOMHAVYL-6TEtqub4Yb")
     const webhookUrl = `https://discord.com/api/webhooks/${key}`;
 
-    const Warnal = document.getElementById("warninfo");
-    if (Name.value == "" || Number.value == "" || DecsPlace.value == "" || CallBack.value == "") {
-        Warnal.style.display = "block";
-    } else {
-        Warnal.style.display = "none";
+    document.getElementById('SubmitConfirm').close()
+    if (noCon == 1) {
         const payload = {
             "content": "<@1181506220339773510>",
             "embeds": [
@@ -124,4 +140,4 @@ function sendWebhook() {
 
 }
 
-export default sendWebhook;
+export { ConfirmWebhook, sendWebhook };

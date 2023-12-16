@@ -16,12 +16,16 @@ import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
 import AllPancakeBan from '../../assets/banner/AllPancake-banner.png'
 
 /* Javascript */
-import sendWebhook from '../javascript/SubmitPancake'
+import { ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
 import { Check_scroll, GoTop } from '../javascript/ToTop'
 
 function Pancake() {
   const handleSubmit = () => {
     sendWebhook();
+  };
+
+  const handleConfirmSubmit = () => {
+    ConfirmWebhook();
   };
 
   const Tophandle = () => {
@@ -161,7 +165,7 @@ function Pancake() {
                     <button onClick={() => document.getElementById('Add').showModal()} className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       variable_add
                     </span>ท็อปปปิ้ง เพิ่มเติม</button>
-                    <button onClick={handleSubmit} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                    <button onClick={handleConfirmSubmit} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       shopping_basket
                     </span>ส่งคำสั่งชื้อ</button>
                   </div>
@@ -264,6 +268,18 @@ function Pancake() {
             <div className="modal-action">
               <form method="dialog">
                 <button className="btn Itimfont">ตกลง</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        <dialog id="SubmitConfirm" className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg Itimfont">เตือน ! ข้อมูลสำหรับผู้แพ้อาหารดั้งนี้</h3>
+            <p className="py-4 Itimfont">แป้งสาลี , นม , ถั่วเหลือง , ซัลไฟต์ และ ไข่<br /><br />กรุณาตรวจสอบว่าคุณหรือผู้ที่คุณบริโภคอาหารนี้เป็นผู้แพ้อาหารที่กล่าวถึง หากคุณไม่แน่ใจหรือมีคำถามเพิ่มเติมเกี่ยวกับส่วนประกอบของอาหาร กรุณาปรึกษาผู้เชี่ยวชาญด้านสุขภาพหรือหมอของคุณก่อนการบริโภคอาหารนี้ ความปลอดภัยของคุณคือสำคัญที่สุด!</p>
+            <div className="modal-action">
+              <button onClick={handleSubmit} className="btn Itimfont">เข้าใจแล้ว</button>
+              <form method="dialog">
+                <button className="btn Itimfont">ปิด</button>
               </form>
             </div>
           </div>
