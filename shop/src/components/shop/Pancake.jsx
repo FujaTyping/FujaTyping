@@ -77,7 +77,7 @@ function Pancake() {
               <div className="join join-vertical lg:join-horizontal">
                 <a href='#ShopingForm' className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   shopping_bag
-                </span>สั่งชื้อ</a>
+                </span>สั่งชื้อ คลิกเลย !</a>
                 <button onClick={() => document.getElementById('contract').showModal()} className="btn btn-neutral join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   support_agent
                 </span>ติดต่อ</button>
@@ -143,22 +143,25 @@ function Pancake() {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text Itimfont">สินค้า / จำนวน (ตัวเลข) *<br />ตัวอย่าง : <kbd className="kbd kbd-sm Itimfont">แพนเค้ก 1 , โดนัท 1</kbd></span>
-                  </label>
-                  <input id='Number' placeholder="แพนเค้ก 0" className="Itimfont InputC input input-bordered" required />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text Itimfont">สถานที รับของ (เวลา 07:00 - 07:40) *</span>
+                    <span className="label-text Itimfont">สินค้า / จำนวน (ตัวเลข) *<br /><i className='Itimfont'>เช่น : <kbd className="kbd kbd-sm Itimfont">แพนเค้ก 1 คือ แพนเค้ก 1 กล่อง</kbd></i></span>
                   </label>
                   <div className="join join-vertical">
-                    <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs Itimfont" disabled />
-                    <input id='DecsPlace' placeholder="คำอธิบาย (รับของตรงไหน)" className="InputC join-item input input-bordered Itimfont" required />
+                    <input id='Number' placeholder="แพนเค้ก 0" className="Itimfont InputC input input-bordered join-item" required />
+                    <input id='MoreDecs' placeholder="คำอธิบาย (กรณีสั่งมากกว่า 1 กล่อง)" className="Itimfont InputC input input-bordered join-item" required />
                   </div>
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text Itimfont">ช่องทางติดต่อกลับ *</span>
+                    <span className="label-text Itimfont">สถานที รับของ (เวลา 07:00 - 07:40) *<br /><i className='Itimfont'>หากรับนอกเวลากรุณาระบุเวลา<br />เช่น <kbd className="kbd kbd-sm Itimfont">ห้อง 132 , 09:30</kbd></i></span>
+                  </label>
+                  <div className="join join-vertical">
+                    <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย หรือ บริเวณใกล้เคียง (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs Itimfont" disabled />
+                    <input id='DecsPlace' placeholder="รับของตรงไหน , เวลา" className="InputC join-item input input-bordered Itimfont" required />
+                  </div>
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text Itimfont">ช่องทางติดต่อกลับ *<br /><i className='Itimfont'>บอกแพลตฟอร์มให้ชัดเจน<br />เช่น <kbd className="kbd kbd-sm Itimfont">Line : phantom_b</kbd></i></span>
                   </label>
                   <input id='CallBack' placeholder="อีเมล , เบอร์โทร หรือ อื่นๆ" className="InputC input input-bordered Itimfont" required />
                 </div>

@@ -12,6 +12,14 @@ function isCheck(elements) {
     }
 }
 
+function isMessage(elements) {
+    if (elements.value == "") {
+        return "-"
+    } else {
+        return elements.value
+    }
+}
+
 let noCon = 0
 
 async function ConfirmWebhook() {
@@ -42,6 +50,7 @@ function sendBypass() {
     const Number = document.getElementById("Number");
     const DecsPlace = document.getElementById("DecsPlace");
     const CallBack = document.getElementById("CallBack");
+    const MoreDecs = document.getElementById("MoreDecs");
 
     const ToppingChoco = document.getElementById("CheckChoco");
     const ToppingRain = document.getElementById("CheckRain");
@@ -59,7 +68,7 @@ function sendBypass() {
         "embeds": [
             {
                 "title": "➕ Meao แพนเค้ก - คำสั่งชื้อ",
-                "description": `โรงเรียน หาดใหญ่วิทยาลัย - ${DecsPlace.value}`,
+                "description": `โรงเรียน หาดใหญ่วิทยาลัย - **${DecsPlace.value}**\nคำอธิบาย : **${isMessage(MoreDecs)}**`,
                 "color": 16631457,
                 "fields": [
                     {
@@ -79,7 +88,7 @@ function sendBypass() {
                     },
                     {
                         "name": "ช่องทางติดต่อกลับ",
-                        "value": `${CallBack.value}`,
+                        "value": `\`${CallBack.value}\``,
                     }
                 ]
             }
@@ -110,6 +119,7 @@ function sendBypass() {
             Number.value = ""
             DecsPlace.value = ""
             CallBack.value = ""
+            MoreDecs.value = ""
 
             ToppingChoco.checked = false
             ToppingJelly.checked = false
