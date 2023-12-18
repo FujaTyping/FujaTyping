@@ -15,6 +15,7 @@ import PancakeBan from '../../assets/banner/Pancake-banner.png'
 import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
 import AllPancakeBan from '../../assets/banner/AllPancake-banner.png'
 import AllFinalBan from '../../assets/banner/AllFinal-banner.png'
+import PowDoughnutBan from '../../assets/banner/PowerDoughnut-banner.png'
 
 /* Javascript */
 import { CheckNext, ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
@@ -101,7 +102,7 @@ function Pancake() {
                 <div id="Pancake" className="carousel-item relative w-full">
                   <img src={PancakeBan} className="w-full" />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#AllFinal" className="btn btn-circle">❮</a>
+                    <a href="#AllPowderDoughnut" className="btn btn-circle">❮</a>
                     <a href="#Doughnut" className="btn btn-circle">❯</a>
                   </div>
                 </div>
@@ -123,6 +124,13 @@ function Pancake() {
                   <img src={AllFinalBan} className="w-full" />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#AllPancake" className="btn btn-circle">❮</a>
+                    <a href="#AllPowderDoughnut" className="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <div id="AllPowderDoughnut" className="carousel-item relative w-full">
+                  <img src={PowDoughnutBan} className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#AllFinal" className="btn btn-circle">❮</a>
                     <a href="#Pancake" className="btn btn-circle">❯</a>
                   </div>
                 </div>
