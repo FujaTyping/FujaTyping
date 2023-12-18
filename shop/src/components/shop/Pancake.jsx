@@ -17,12 +17,16 @@ import AllPancakeBan from '../../assets/banner/AllPancake-banner.png'
 import AllFinalBan from '../../assets/banner/AllFinal-banner.png'
 
 /* Javascript */
-import { ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
+import { CheckNext, ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
 import { Check_scroll, GoTop } from '../javascript/ToTop'
 
 function Pancake() {
   const handleSubmit = () => {
     sendWebhook();
+  };
+
+  const handleNext = () => {
+    CheckNext();
   };
 
   const handleConfirmSubmit = () => {
@@ -135,35 +139,53 @@ function Pancake() {
             </div>
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
               <div className="card-body">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text Itimfont">ชื่อผู้สั่งชื้อ (ภาษาไทย) *</span>
-                  </label>
-                  <input id='Name' placeholder="ชื่อ" className="InputC input input-bordered Itimfont" required />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text Itimfont">สินค้า / จำนวน (ตัวเลข) *<br /><i className='Itimfont'>เช่น : <kbd className="kbd kbd-sm Itimfont">แพนเค้ก 1 คือ แพนเค้ก 1 กล่อง</kbd></i></span>
-                  </label>
-                  <div className="join join-vertical">
-                    <input id='Number' placeholder="แพนเค้ก 0" className="Itimfont InputC input input-bordered join-item" required />
-                    <input id='MoreDecs' placeholder="คำอธิบาย (กรณีสั่งมากกว่า 1 กล่อง)" className="Itimfont InputC input input-bordered join-item" required />
+                <div id='NextFirst'>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text Itimfont">ชื่อผู้สั่งชื้อ (ภาษาไทย) *</span>
+                    </label>
+                    <input id='Name' placeholder="ชื่อ" className="InputC input input-bordered Itimfont" required />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text Itimfont">สินค้า / จำนวน (ตัวเลข) *<br /><i className='Itimfont'>เช่น : <kbd className="kbd kbd-sm Itimfont">แพนเค้ก 1 คือ แพนเค้ก 1 กล่อง</kbd></i></span>
+                    </label>
+                    <div>
+                      <div className="form-control">
+                        <label className="label cursor-pointer">
+                          <span className="label-text Itimfont">แพนเค้ก</span>
+                          <input id='RPan' type="radio" name="RadioSelect" className="radio" />
+                        </label>
+                      </div>
+                      <div className="form-control">
+                        <label className="label cursor-pointer">
+                          <span className="label-text Itimfont">โดนัท</span>
+                          <input id='RDog' type="radio" name="RadioSelect" className="radio" />
+                        </label>
+                      </div>
+                    </div>
+                    <div style={{ marginTop: '13px' }} className="join join-vertical">
+                      <input id='Number' placeholder="จำนวน (ตัวเลข)" className="Itimfont InputC input input-bordered join-item" required />
+                      <input id='MoreDecs' placeholder="คำอธิบาย (กรณีสั่งมากกว่า 1 กล่อง)" className="Itimfont InputC input input-bordered join-item" required />
+                    </div>
                   </div>
                 </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text Itimfont">สถานที รับของ (เวลา 07:00 - 07:40) *<br /><i className='Itimfont'>หากรับนอกเวลากรุณาระบุเวลา<br />เช่น <kbd className="kbd kbd-sm Itimfont">ห้อง 132 , 09:30</kbd></i></span>
-                  </label>
-                  <div className="join join-vertical">
-                    <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย หรือ บริเวณใกล้เคียง (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs Itimfont" disabled />
-                    <input id='DecsPlace' placeholder="รับของตรงไหน , เวลา" className="InputC join-item input input-bordered Itimfont" required />
+                <div id='NextSec' style={{ display: 'none' }}>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text Itimfont">สถานที รับของ (เวลา 07:00 - 07:40) *<br /><i className='Itimfont'>หากรับนอกเวลากรุณาระบุเวลา<br />เช่น <kbd className="kbd kbd-sm Itimfont">ห้อง 132 , 09:30</kbd></i></span>
+                    </label>
+                    <div className="join join-vertical">
+                      <input type="text" placeholder="โรงเรียน หาดใหญ่วิทยาลัย หรือ บริเวณใกล้เคียง (บังคับ)" className="InputC join-item input input-bordered w-full max-w-xs Itimfont" disabled />
+                      <input id='DecsPlace' placeholder="รับของตรงไหน , เวลา" className="InputC join-item input input-bordered Itimfont" required />
+                    </div>
                   </div>
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text Itimfont">ช่องทางติดต่อกลับ *<br /><i className='Itimfont'>บอกแพลตฟอร์มให้ชัดเจน<br />เช่น <kbd className="kbd kbd-sm Itimfont">Line : phantom_b</kbd></i></span>
-                  </label>
-                  <input id='CallBack' placeholder="อีเมล , เบอร์โทร หรือ อื่นๆ" className="InputC input input-bordered Itimfont" required />
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text Itimfont">ช่องทางติดต่อกลับ *<br /><i className='Itimfont'>บอกแพลตฟอร์มให้ชัดเจน<br />เช่น <kbd className="kbd kbd-sm Itimfont">Line : phantom_b</kbd></i></span>
+                    </label>
+                    <input id='CallBack' placeholder="อีเมล , เบอร์โทร หรือ อื่นๆ" className="InputC input input-bordered Itimfont" required />
+                  </div>
                 </div>
                 <div id='warninfo' style={{ display: 'none' }} className="form-control mt-6 animate__animated animate__shakeX">
                   <div role="alert" className="alert alert-error">
@@ -172,15 +194,21 @@ function Pancake() {
                   </div>
                 </div>
                 <div className="form-control mt-6">
-                  <div className="join join-vertical">
+                  <button id='NextBT' onClick={handleNext} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                    start
+                  </span>ถัดไป</button>
+                  <div id='GSubmit' style={{ display: 'none' }} className="join join-vertical">
                     <button onClick={() => document.getElementById('Add').showModal()} className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       variable_add
                     </span>ท็อปปปิ้ง เพิ่มเติม</button>
+                    <button id='SpacialPong' style={{ display: 'none' }} onClick={() => document.getElementById('Spacial').showModal()} className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                      nutrition
+                    </span>ผง เพิ่มเติม</button>
                     <button onClick={handleConfirmSubmit} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       shopping_basket
                     </span>ส่งคำสั่งชื้อ</button>
                   </div>
-                  <div style={{ marginTop: '15px' }} className="form-control">
+                  <div id='OneClick' style={{ marginTop: '15px', display: 'none' }} className="form-control">
                     <label className="label cursor-pointer">
                       <span className="label-text Itimfont">สั่งซื้อภายในคลิกเดี่ยว</span>
                       <input id='CheckbyPass' type="checkbox" className="checkbox" />
@@ -212,7 +240,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={1} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={5} delay={1} /></thai></div>
                 </div>
                 <div className="stat">
                   <div className="stat-figure text-secondary">
@@ -221,7 +249,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={44} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={52} delay={1} /></thai></div>
                 </div>
               </div>
             </div>
@@ -287,6 +315,54 @@ function Pancake() {
               <label className="label cursor-pointer">
                 <span className="label-text Itimfont">มาร์ชเมลโล</span>
                 <input id='CheckMash' type="checkbox" className="checkbox" />
+              </label>
+            </div>
+            <div className="modal-action">
+              <form method="dialog">
+                <button className="btn Itimfont">ตกลง</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        <dialog id="Spacial" className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg Itimfont">ผง (จำเป็น ถ้า อยากได้เป็นซอส ติกไม่เอา)</h3>
+            <p className="py-4 Itimfont">ใส่ได้ 1 ผง</p>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">ไอซ์ซิ้ง</span>
+                <input id='PowIce' type="radio" name="PowRadioSelect" className="radio" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">เผือก</span>
+                <input id='PowPeaK' type="radio" name="PowRadioSelect" className="radio" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">นมสด</span>
+                <input id='PowMilk' type="radio" name="PowRadioSelect" className="radio" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">ซ็อกโกแลต</span>
+                <input id='PowChoco' type="radio" name="PowRadioSelect" className="radio" />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">สตรอว์เบอร์รี</span>
+                <input id='PowStraw' type="radio" name="PowRadioSelect" className="radio" />
+              </label>
+            </div>
+            <br />
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text Itimfont">ไม่เอาผง *</span>
+                <input id='PowNWant' type="radio" name="PowRadioSelect" className="radio" checked />
               </label>
             </div>
             <div className="modal-action">

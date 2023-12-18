@@ -21,6 +21,48 @@ function isMessage(elements) {
 }
 
 let noCon = 0
+const defaultOrder = "แพนเค้ก"
+const PricePan = 25
+const PriceDog = 30
+let Stepstate = 0
+
+function CheckNext() {
+    const Name = document.getElementById("Name");
+    const Number = document.getElementById("Number");
+    const Warnal = document.getElementById("warninfo");
+    const RadioP = document.getElementById('RPan');
+    const RadioD = document.getElementById('RDog');
+
+    const NextF = document.getElementById('NextFirst');
+    const NextSe = document.getElementById('NextSec');
+    const NextBT = document.getElementById('NextBT');
+    const NextGSub = document.getElementById('GSubmit');
+    const OClick = document.getElementById('OneClick');
+    const SpacialP = document.getElementById('SpacialPong');
+
+    if (Stepstate == 0) {
+        if (Name.value == "" || Number.value == "") {
+            Warnal.style.display = "block";
+        } else {
+            if (RadioD.checked || RadioP.checked) {
+                Warnal.style.display = "none";
+                NextF.style.display = 'none';
+                NextSe.style.display = 'block';
+                NextBT.style.display = 'none';
+                NextGSub.style.display = 'flex';
+                OClick.style.display = 'block';
+
+                if (RadioD.checked) {
+                    SpacialP.style.display = 'inline-flex';
+                } else {
+                    SpacialP.style.display = 'none';
+                }
+            } else {
+                Warnal.style.display = "block";
+            }
+        }
+    }
+}
 
 async function ConfirmWebhook() {
     const Name = document.getElementById("Name");
@@ -52,6 +94,9 @@ function sendBypass() {
     const CallBack = document.getElementById("CallBack");
     const MoreDecs = document.getElementById("MoreDecs");
 
+    const RadioP = document.getElementById('RPan');
+    const RadioD = document.getElementById('RDog');
+
     const ToppingChoco = document.getElementById("CheckChoco");
     const ToppingRain = document.getElementById("CheckRain");
     const ToppingJelly = document.getElementById("CheckJelly");
@@ -59,6 +104,22 @@ function sendBypass() {
     const ToppingWChoco = document.getElementById("CheckWChoco");
     const ToppingBJelly = document.getElementById("CheckBlueJelly");
 
+    const NextF = document.getElementById('NextFirst');
+    const NextSe = document.getElementById('NextSec');
+    const NextBT = document.getElementById('NextBT');
+    const NextGSub = document.getElementById('GSubmit');
+    const OClick = document.getElementById('OneClick');
+    const SpacialP = document.getElementById('SpacialPong');
+
+    const PowNWant = document.getElementById('PowNWant');
+    const PowChoco = document.getElementById('PowChoco');
+    const PowPeaK = document.getElementById('PowPeaK');
+    const PowMilk = document.getElementById('PowMilk');
+    const PowIcce = document.getElementById('PowIce');
+    const PowStraw = document.getElementById('PowStraw');
+
+    const Warnal = document.getElementById("warninfo");
+    Warnal.style.display = 'none';
 
     var key = dsft("1181506005461389323/-BesYBELUQUNsv_J8V7KM4hYv0_OvoOhnjKss0kzrB0pOxK5PEOMHAVYL-6TEtqub4Yb")
     const webhookUrl = `https://discord.com/api/webhooks/${key}`;
@@ -68,22 +129,22 @@ function sendBypass() {
         "embeds": [
             {
                 "title": "➕ Meao แพนเค้ก - คำสั่งชื้อ",
-                "description": `โรงเรียน หาดใหญ่วิทยาลัย - **${DecsPlace.value}**\nคำอธิบาย : **${isMessage(MoreDecs)}**`,
+                "description": `ชื่อผู้สั่งซื้อ : **${Name.value}**\nโรงเรียน หาดใหญ่วิทยาลัย - **${DecsPlace.value}**\nคำอธิบาย : **${isMessage(MoreDecs)}**`,
                 "color": 16631457,
                 "fields": [
                     {
-                        "name": "ชื่อผู้สั่งชื่อ",
-                        "value": `${Name.value}`,
-                        "inline": true
-                    },
-                    {
                         "name": "สินค้า / จำนวน",
-                        "value": `${Number.value}`,
+                        "value": `แพนเค้ก : ${isCheck(RadioP)}\nโดนัท : ${isCheck(RadioD)}\nจำนวน : ${Number.value}`,
                         "inline": true
                     },
                     {
                         "name": "ท็อปปิ้ง",
                         "value": `ซ็อกโกแลตชิพ : ${isCheck(ToppingChoco)}\nไวท์ซ็อกโกแลตชิพ : ${isCheck(ToppingWChoco)}\nเรนโบว์ (แบบยาว) : ${isCheck(ToppingRain)}\nเยลลี้ เชอรี่ : ${isCheck(ToppingJelly)}\nเยลลี้ บลูเบอรี่ : ${isCheck(ToppingBJelly)}\nมาร์ชเมลโล : ${isCheck(ToppingMash)}`,
+                        "inline": true
+                    },
+                    {
+                        "name": "ผง",
+                        "value": `ไอซ์ซิ้ง : ${isCheck(PowIcce)}\nนมสด : ${isCheck(PowMilk)}\nซ็อกโกแลต : ${isCheck(PowChoco)}\nเผือก : ${isCheck(PowPeaK)}\nสตอรเบอรี่ : ${isCheck(PowStraw)}\nไม่เอา : ${isCheck(PowNWant)}`,
                         "inline": true
                     },
                     {
@@ -106,6 +167,13 @@ function sendBypass() {
 
     axios.post(webhookUrl, payload)
         .then(response => {
+            NextF.style.display = 'block';
+            NextSe.style.display = 'none';
+            NextBT.style.display = 'inline-flex';
+            NextGSub.style.display = 'none';
+            OClick.style.display = 'none';
+            SpacialP.style.display = 'none';
+
             Swal.fire({
                 icon: 'success',
                 title: '<thai>คำสั่งชื้อถูกส่งแล้ว !</thai>',
@@ -127,6 +195,14 @@ function sendBypass() {
             ToppingRain.checked = false
             ToppingWChoco.checked = false
             ToppingBJelly.checked = false
+            RadioD.checked = false
+            RadioP.checked = false
+            PowChoco.checked = false
+            PowIcce.checked = false
+            PowMilk.checked = false
+            PowPeaK.checked = false
+            PowStraw.checked = false
+            PowNWant.checked = true
         })
         .catch(error => {
             Swal.fire({
@@ -162,4 +238,4 @@ function sendWebhook() {
 
 }
 
-export { ConfirmWebhook, sendWebhook };
+export { CheckNext, ConfirmWebhook, sendWebhook };
