@@ -3,6 +3,7 @@ import axios from 'axios'
 
 /* JS */
 import dsft from './Secreat';
+import oridg from './Order';
 
 function isCheck(elements) {
     if (elements.checked) {
@@ -124,34 +125,47 @@ function sendBypass() {
     var key = dsft("1181506005461389323/-BesYBELUQUNsv_J8V7KM4hYv0_OvoOhnjKss0kzrB0pOxK5PEOMHAVYL-6TEtqub4Yb")
     const webhookUrl = `https://discord.com/api/webhooks/${key}`;
 
+    let OrderID = oridg()
+    let DecsWH = `ชื่อผู้สั่งซื้อ : **${Name.value}**\nโรงเรียน หาดใหญ่วิทยาลัย - **${DecsPlace.value}**\nคำอธิบาย : **${isMessage(MoreDecs)}**`
+    let ProductWH = `แพนเค้ก : ${isCheck(RadioP)}\nโดนัท : ${isCheck(RadioD)}\nจำนวน : ${Number.value}`
+    let ToppingWH = `ซ็อกโกแลตชิพ : ${isCheck(ToppingChoco)}\nไวท์ซ็อกโกแลตชิพ : ${isCheck(ToppingWChoco)}\nเรนโบว์ (แบบยาว) : ${isCheck(ToppingRain)}\nเยลลี้ เชอรี่ : ${isCheck(ToppingJelly)}\nเยลลี้ บลูเบอรี่ : ${isCheck(ToppingBJelly)}\nมาร์ชเมลโล : ${isCheck(ToppingMash)}`
+    let PowderHW = `ไอซ์ซิ้ง : ${isCheck(PowIcce)}\nนมสด : ${isCheck(PowMilk)}\nซ็อกโกแลต : ${isCheck(PowChoco)}\nเผือก : ${isCheck(PowPeaK)}\nสตอรเบอรี่ : ${isCheck(PowStraw)}\nไม่เอา : ${isCheck(PowNWant)}`
+    let ResTime = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Asia/Bangkok' });
+    let ResDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'Asia/Bangkok' });
+    let NameV = Name.value
+    let CallbackV = CallBack.value
+
     const payload = {
         "content": "<@1181506220339773510>",
         "embeds": [
             {
-                "title": "➕ Meao แพนเค้ก - คำสั่งชื้อ",
-                "description": `ชื่อผู้สั่งซื้อ : **${Name.value}**\nโรงเรียน หาดใหญ่วิทยาลัย - **${DecsPlace.value}**\nคำอธิบาย : **${isMessage(MoreDecs)}**`,
+                "title": `➕ Meao แพนเค้ก - คำสั่งชื้อ [${OrderID}]`,
+                "description": DecsWH,
                 "color": 16631457,
                 "fields": [
                     {
                         "name": "สินค้า / จำนวน",
-                        "value": `แพนเค้ก : ${isCheck(RadioP)}\nโดนัท : ${isCheck(RadioD)}\nจำนวน : ${Number.value}`,
+                        "value": ProductWH,
                         "inline": true
                     },
                     {
                         "name": "ท็อปปิ้ง",
-                        "value": `ซ็อกโกแลตชิพ : ${isCheck(ToppingChoco)}\nไวท์ซ็อกโกแลตชิพ : ${isCheck(ToppingWChoco)}\nเรนโบว์ (แบบยาว) : ${isCheck(ToppingRain)}\nเยลลี้ เชอรี่ : ${isCheck(ToppingJelly)}\nเยลลี้ บลูเบอรี่ : ${isCheck(ToppingBJelly)}\nมาร์ชเมลโล : ${isCheck(ToppingMash)}`,
+                        "value": ToppingWH,
                         "inline": true
                     },
                     {
                         "name": "ผง",
-                        "value": `ไอซ์ซิ้ง : ${isCheck(PowIcce)}\nนมสด : ${isCheck(PowMilk)}\nซ็อกโกแลต : ${isCheck(PowChoco)}\nเผือก : ${isCheck(PowPeaK)}\nสตอรเบอรี่ : ${isCheck(PowStraw)}\nไม่เอา : ${isCheck(PowNWant)}`,
+                        "value": PowderHW,
                         "inline": true
                     },
                     {
                         "name": "ช่องทางติดต่อกลับ",
                         "value": `\`${CallBack.value}\``,
                     }
-                ]
+                ],
+                "footer": {
+                    "text": `เวลาสั่งซื้อ : ${ResDate} | ${ResTime}`
+                }
             }
         ],
     };
@@ -166,7 +180,7 @@ function sendBypass() {
     })
 
     axios.post(webhookUrl, payload)
-        .then(response => {
+        .then(async response => {
             NextF.style.display = 'block';
             NextSe.style.display = 'none';
             NextBT.style.display = 'inline-flex';
@@ -176,7 +190,7 @@ function sendBypass() {
 
             Swal.fire({
                 icon: 'success',
-                title: '<thai>คำสั่งชื้อถูกส่งแล้ว !</thai>',
+                title: `<thai>คำสั่งชื้อถูกส่งแล้ว (${OrderID}) !</thai>`,
                 html: `<e class='Itimfont'>กรุณารอการตอบกลับทาง ช่องทางติดต่อที่ให้ไว้ (${CallBack.value})</e>`,
                 color: "#160E09",
                 background: "#fdc6a1",
@@ -203,6 +217,8 @@ function sendBypass() {
             PowPeaK.checked = false
             PowStraw.checked = false
             PowNWant.checked = true
+
+            await BackUpData(OrderID, `${ResDate}, ${ResTime}`, NameV, ProductWH, ToppingWH, PowderHW, CallbackV);
         })
         .catch(error => {
             Swal.fire({
@@ -214,6 +230,36 @@ function sendBypass() {
                 showConfirmButton: false,
             })
         });
+}
+
+function BackUpData(or, ti, nv, f1v, f2v, f3v, cb) {
+    var key = dsft("pk3brinp3bkh8");
+    const dburl = `https://sheetdb.io/api/v1/${key}?sheet=Webhook`
+
+    axios.post(dburl, {
+        data: [
+            {
+                'Order ID': or,
+                'Time': ti,
+                'Nave.value': nv,
+                'Fields1.value': f1v,
+                'Fields2.value': f2v,
+                'Fields3.value': f3v,
+                'CallBack.value': cb,
+            }
+        ]
+    }, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(async (response) => {
+            console.log(`[DATABASE] ${or} : Saved to DB`)
+        })
+        .catch((error) => {
+            console.log(`[DATABASE] ${or} : Can't save to DB`)
+        })
 }
 
 function sendWebhook() {

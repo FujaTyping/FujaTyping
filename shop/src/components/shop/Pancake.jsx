@@ -20,6 +20,7 @@ import PowDoughnutBan from '../../assets/banner/PowerDoughnut-banner.png'
 /* Javascript */
 import { CheckNext, ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
 import { Check_scroll, GoTop } from '../javascript/ToTop'
+import oridg from '../javascript/Order'
 
 function Pancake() {
   const handleSubmit = () => {
@@ -248,7 +249,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={5} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={6} delay={1} /></thai></div>
                 </div>
                 <div className="stat">
                   <div className="stat-figure text-secondary">
@@ -257,7 +258,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={52} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={54} delay={1} /></thai></div>
                 </div>
               </div>
             </div>
@@ -370,7 +371,7 @@ function Pancake() {
             <div className="form-control">
               <label className="label cursor-pointer">
                 <span className="label-text Itimfont">ไม่เอาผง *</span>
-                <input id='PowNWant' type="radio" name="PowRadioSelect" className="radio" checked />
+                <input id='PowNWant' type="radio" name="PowRadioSelect" className="radio" defaultChecked />
               </label>
             </div>
             <div className="modal-action">
