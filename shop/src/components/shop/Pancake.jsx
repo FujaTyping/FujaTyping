@@ -42,6 +42,8 @@ function Pancake() {
   const Typing = React.useRef(null);
 
   React.useEffect(() => {
+    document.getElementById('Promotion').showModal()
+
     const typed = new Typed(Typing.current, {
       strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด ทำสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
       loop: true,
@@ -387,6 +389,17 @@ function Pancake() {
             <p className="py-4 Itimfont">แป้งสาลี , นม , ถั่วเหลือง , ซัลไฟต์ และ ไข่<br /><br />กรุณาตรวจสอบว่าคุณหรือผู้ที่คุณบริโภคอาหารนี้เป็นผู้แพ้อาหารที่กล่าวถึง หากคุณไม่แน่ใจหรือมีคำถามเพิ่มเติมเกี่ยวกับส่วนประกอบของอาหาร กรุณาปรึกษาผู้เชี่ยวชาญด้านสุขภาพหรือหมอของคุณก่อนการบริโภคอาหารนี้ ความปลอดภัยของคุณคือสำคัญที่สุด!</p>
             <div className="modal-action">
               <button onClick={handleSubmit} className="btn btn-primary Itimfont">เข้าใจแล้ว</button>
+            </div>
+          </div>
+        </dialog>
+        <dialog id="Promotion" className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg Itimfont">โปรโมชัน (ลดราคา)</h3>
+            <p className="py-4 Itimfont">ตอนนี้มีโปรโมชัน สำหรับเทศกาลวันคริสต์มาส<br />แพนเค้ก จาก 25฿ เหลือ 20฿<br />โดนัท จาก 30฿ เหลือ 25฿<br /><br />ใช้โค้ด "LastChrismas2023" ในช่องคำอธิบาย<br /><b className='Itimfont'>** ใช้ได้วันนี้ถึงวันที่ 26 ธันวาคม 2566 **</b></p>
+            <div className="modal-action">
+              <form method="dialog">
+                <button className="btn Itimfont">โอเค</button>
+              </form>
             </div>
           </div>
         </dialog>
