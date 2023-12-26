@@ -42,6 +42,7 @@ function Pancake() {
   const Typing = React.useRef(null);
 
   React.useEffect(() => {
+    console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nMeao Pancake - project\n© Copyright 2023 (FujaTyping.dev) all rights reserved");
     document.getElementById('Promotion').showModal()
 
     const typed = new Typed(Typing.current, {
@@ -251,7 +252,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={10} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={14} delay={1} /></thai></div>
                 </div>
                 <div className="stat">
                   <div className="stat-figure text-secondary">
@@ -260,7 +261,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={64} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={68} delay={1} /></thai></div>
                 </div>
               </div>
             </div>
