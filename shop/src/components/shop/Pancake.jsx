@@ -4,6 +4,7 @@ import 'animate.css';
 import CountUp from 'react-countup';
 import './Shop.css'
 import 'https://tally.so/widgets/embed.js';
+import TextTransition, { presets } from 'react-text-transition';
 
 /* Assets */
 import Logo from '../../assets/shop/Pancake.png'
@@ -21,6 +22,8 @@ import PowDoughnutBan from '../../assets/banner/PowerDoughnut-banner.png'
 import { CheckNext, ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
 import { Check_scroll, GoTop } from '../javascript/ToTop'
 import oridg from '../javascript/Order'
+
+const TextTran = ['แพนเค้ก', 'โดนัท'];
 
 function Pancake() {
   const handleSubmit = () => {
@@ -40,6 +43,7 @@ function Pancake() {
   };
 
   const Typing = React.useRef(null);
+  const [TextTranindex, setTextTranindex] = React.useState(0);
 
   React.useEffect(() => {
     console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nMeao Pancake - project\n© Copyright 2023 (FujaTyping.dev) all rights reserved");
@@ -59,9 +63,15 @@ function Pancake() {
       Check_scroll();
     };
 
+    const TextTraninterval = setInterval(
+      () => setTextTranindex((TextTranindex) => TextTranindex + 1),
+      5000,
+    );
+
     return () => {
       typed.destroy();
       window.onscroll = null;
+      clearTimeout(TextTraninterval);
     };
   }, []);
 
@@ -81,7 +91,7 @@ function Pancake() {
                   <img src={Logo} />
                 </div>
               </div>
-              <h1 className="text-5xl font-bold Itimfont"><thai>Meao</thai> แพนเค้ก</h1>
+              <h1 className="text-5xl font-bold Itimfont"><thai>Meao</thai> <TextTransition inline={true} springConfig={presets.wobbly}><span className='Itimfont'>{TextTran[TextTranindex % TextTran.length]}</span></TextTransition></h1>
               <p className="py-6 Itimfont">แพนเค้ก " Meao แพนเค้ก " แพนเค้กโฮมเมด อบสดใหม่ทุกวัน ให้คุณได้สัมผัสรสชาติที่หอมกรุ่น อร่อยไม่เหมือนใคร แพนเค้กที่ถูกใจทุกคน สั่งเลยวันนี้</p>
               <div className="join join-vertical lg:join-horizontal">
                 <a href='#ShopingForm' className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
@@ -268,6 +278,26 @@ function Pancake() {
           </div>
         </div>
         <img width='100%' src={DividerFooter}></img>
+        <div className="hero bg-primary reviewer">
+          <div style={{ padding: '50px' }} className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 className="text-5xl font-bold"><thai>รีวิวจากลูกค้า</thai></h1>
+              <p className="py-6 Itimfont">ข้อมูลมาจากแบบสอบถามความพึงพอใจ ตั้งแต่วันที่ 16 ธันวาคม 2566</p>
+              <div className="chat chat-start">
+                <div className="chat-bubble chat-bubble-secondary Itimfont">อร่อยมมาก</div>
+              </div>
+              <div className="chat chat-start">
+                <div className="chat-bubble chat-bubble-secondary Itimfont">โดนัท ชอบแบบซอสมากกว่า แบบผงก็ได้อยู่</div>
+              </div>
+              <div className="chat chat-end">
+                <div className="chat-bubble chat-bubble-secondary Itimfont">Delicious !!</div>
+              </div>
+              <div className="chat chat-end">
+                <div className="chat-bubble chat-bubble-secondary Itimfont">อร่อยมากค่ะเพื่อนแย่งกินหมดเลย</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <footer id='Footer' className="footer footer-center p-10 bg-primary text-primary-content betterfotter">
           <aside>
             <img width="50" height="50" src={Threechut}></img>

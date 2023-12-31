@@ -56,6 +56,13 @@ thai {
     background-size: cover;
 }
 
+.reviewer {
+    background-image: url('../../assets/background/Review-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .button-top {
     position: fixed !important;
     bottom: 20px !important;
