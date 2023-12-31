@@ -8,7 +8,7 @@ function Footer() {
         <>
             <footer className="footer p-10 bg-neutral text-neutral-content">
                 <aside>
-                    <p>© Siraphop Sukchu<br />Copyright all rights reserved 2023</p>
+                    <p>© Siraphop Sukchu<br />Copyright all rights reserved 2023 - 2024</p>
                 </aside>
                 <nav>
                     <header className="footer-title">Social</header>

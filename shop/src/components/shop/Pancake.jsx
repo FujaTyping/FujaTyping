@@ -304,7 +304,7 @@ function Pancake() {
             <p className="font-bold Itimfont">
               โครงงาน - Meao แพนเค้ก <br />โรงเรียน หาดใหญ่วิทยาลัย<br />โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102)
             </p>
-            <p className='Itimfont'>ลิขสิทธิ์ © 2566 - สงวนลิขสิทธิ์ทั้งหมด</p>
+            <p className='Itimfont'>ลิขสิทธิ์ © 2566 - 2567 | สงวนลิขสิทธิ์ทั้งหมด</p>
             <button data-tally-open="3qRl52" data-tally-emoji-animation="none" data-tally-auto-close="5000" className="btn btn-secondary Itimfont" ><span className="material-symbols-outlined Gicon">
               query_stats
             </span>แบบสอบถามความพึงพอใจ</button>
