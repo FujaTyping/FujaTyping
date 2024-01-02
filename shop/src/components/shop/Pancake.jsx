@@ -47,7 +47,7 @@ function Pancake() {
 
   React.useEffect(() => {
     console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nMeao Pancake - Project\n© Copyright 2023-2024 (fujaTyping.dev) all rights reserved");
-    //document.getElementById('Promotion').showModal()
+    document.getElementById('Notice').showModal()
 
     const typed = new Typed(Typing.current, {
       strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด ทำสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
@@ -423,10 +423,10 @@ function Pancake() {
             </div>
           </div>
         </dialog>
-        <dialog id="Promotion" className="modal">
+        <dialog id="Notice" className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg Itimfont">โปรโมชัน (ลดราคา)</h3>
-            <p className="py-4 Itimfont">ตอนนี้มีโปรโมชัน สำหรับเทศกาลวันคริสต์มาส<br />แพนเค้ก จาก 25฿ เหลือ 20฿<br />โดนัท จาก 30฿ เหลือ 25฿<br /><br />ใช้โค้ด "LastChrismas2023" ในช่องคำอธิบาย<br /><b className='Itimfont'>** ใช้ได้วันนี้ถึงวันที่ 26 ธันวาคม 2566 **</b></p>
+            <h3 className="font-bold text-lg Itimfont">การไม่รองรับการตอบกลับจาก Ig (Instagram) อีกต่อไป</h3>
+            <p className="py-4 Itimfont">เรียน ลูกค้า Meao แพนเค้ก ทุกท่าน<br /><br />เนี่องด้วยทางร้าน Meao แพนเค้ก พบว่า ลูกค้าบางท่านให้ช่องทางติดต่อกลับทาง Instagram มักไม่ตอบกลับข้อความของทางร้านเป็นเวลานาน ส่งผลให้ทางร้านไม่สามารถให้บริการลูกค้าได้อย่างมีประสิทธิภาพ ทาง Meao แพนเค้ก จึงขอแจ้งให้ทราบถึงการเปลี่ยนแปลง<br /><br /><b className='Itimfont'>** ตั้งแต่วันที่ 15 มกราคม 2567 เป็นต้นไป **</b></p>
             <div className="modal-action">
               <form method="dialog">
                 <button className="btn Itimfont">โอเค</button>
