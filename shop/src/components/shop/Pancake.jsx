@@ -262,7 +262,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={17} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={20} delay={1} /></thai></div>
                 </div>
                 <div className="stat">
                   <div className="stat-figure text-secondary">
@@ -271,7 +271,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={73} delay={1} /></thai></div>
+                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={77} delay={1} /></thai></div>
                 </div>
               </div>
             </div>
