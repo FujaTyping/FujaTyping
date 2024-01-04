@@ -47,7 +47,7 @@ function Pancake() {
 
   React.useEffect(() => {
     console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nMeao Pancake - Project\n© Copyright 2023-2024 (fujaTyping.dev) all rights reserved");
-    document.getElementById('Notice').showModal()
+    //document.getElementById('Notice').showModal()
 
     const typed = new Typed(Typing.current, {
       strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด ทำสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
