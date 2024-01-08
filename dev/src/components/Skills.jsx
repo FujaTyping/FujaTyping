@@ -33,7 +33,6 @@ function Skills() {
                     <img src={ReactIcon} />
                 </div>
             </div>
-            <div className="divider lg:divider-horizontal"></div>
             <div className="avatar skill">
                 <div className="w-16">
                     <img src={Nodejs} />

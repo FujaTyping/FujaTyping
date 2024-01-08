@@ -54,7 +54,9 @@ function Home() {
                     <div className="max-w-md">
                         <h1 style={{ textAlign: "left" }} className="text-5x1 font-bold title">My skills</h1>
                         <div style={{ marginTop: "30px" }}>
-                            <Skills />
+                            <div className="grid grid-cols-4 gap-4">
+                                <Skills />
+                            </div>
                         </div>
                     </div>
                 </div>
