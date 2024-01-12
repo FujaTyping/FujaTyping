@@ -3,6 +3,10 @@ const Projectplaceholder = '<PROJECTNAME_HERE>'
 
 /* Components */
 import Footer from './components/Footer'
+import Project from './components/Project'
+
+/* Assets */
+import githubIcon from './assets/Icon/Github.svg'
 
 function Index() {
   return (
@@ -13,9 +17,12 @@ function Index() {
             <div className="max-w-md">
               <h1 className="text-5x1 font-bold title">Welcome to project Index</h1>
               <p className="py-6">You're visiting the site without an project name, Please check the url again <span className="badge badge-primary">project.fujatyping.dev/{Projectplaceholder}</span></p>
-              <a href='https://fujatyping.dev/' className="btn btn-primary"><span className="material-symbols-outlined Gicon">
-                home
-              </span>Home page</a>
+              <div className="join">
+                <a href='https://fujatyping.dev/' className="btn btn-primary join-item"><span className="material-symbols-outlined Gicon">
+                  home
+                </span>Home page</a>
+                <a href='https://github.com/FujaTyping' className="btn btn-accent join-item"><img src={githubIcon} />My project</a>
+              </div>
             </div>
           </div>
         </div>
