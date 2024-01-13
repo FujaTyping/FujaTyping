@@ -46,7 +46,7 @@ function Pancake() {
   const [TextTranindex, setTextTranindex] = React.useState(0);
 
   React.useEffect(() => {
-    console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nMeao Pancake - Project\n© Copyright 2023-2024 (fujaTyping.dev) all rights reserved");
+    console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nProject : Meao Pancake\nFont : MN Manao Dong (f0nt.com)\n© Copyright 2023-2024 (shop.fujaTyping.dev) all rights reserved");
     //document.getElementById('Notice').showModal()
 
     const typed = new Typed(Typing.current, {
@@ -91,7 +91,7 @@ function Pancake() {
                   <img src={Logo} />
                 </div>
               </div>
-              <h1 className="text-5xl font-bold Itimfont"><thai>Meao</thai> <TextTransition inline={true} springConfig={presets.wobbly}><span className='Itimfont'>{TextTran[TextTranindex % TextTran.length]}</span></TextTransition></h1>
+              <h1 className="text-5xl font-bold Itimfont"><thai>Meao</thai> <TextTransition inline={true} springConfig={presets.wobbly}><thai>{TextTran[TextTranindex % TextTran.length]}</thai></TextTransition></h1>
               <p className="py-6 Itimfont">แพนเค้ก " Meao แพนเค้ก " แพนเค้กโฮมเมด อบสดใหม่ทุกวัน ให้คุณได้สัมผัสรสชาติที่หอมกรุ่น อร่อยไม่เหมือนใคร แพนเค้กที่ถูกใจทุกคน สั่งเลยวันนี้</p>
               <div className="join join-vertical lg:join-horizontal">
                 <a href='#ShopingForm' className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
@@ -262,7 +262,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ออเดอร์ (รายการ)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={24} delay={1} /></thai></div>
+                  <div className="stat-value"><p><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={24} delay={1} /></p></div>
                 </div>
                 <div className="stat">
                   <div className="stat-figure text-secondary">
@@ -271,7 +271,7 @@ function Pancake() {
                     </span>
                   </div>
                   <div className="stat-title Itimfont">ขายได้ (กล่อง)</div>
-                  <div className="stat-value"><thai><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={82} delay={1} /></thai></div>
+                  <div className="stat-value"><p><CountUp style={{ fontFamily: 'Sriracha' }} duration={5} end={82} delay={1} /></p></div>
                 </div>
               </div>
             </div>
