@@ -20,6 +20,7 @@ export default {
           "error": "#991b1b",
         }
       },
+      "aqua",
       "light",
       "dark",
     ],
