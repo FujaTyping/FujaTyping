@@ -17,6 +17,7 @@ import DoughnutBan from '../../assets/banner/Doughnut-banner.png'
 import AllPancakeBan from '../../assets/banner/AllPancake-banner.png'
 import AllFinalBan from '../../assets/banner/AllFinal-banner.png'
 import PowDoughnutBan from '../../assets/banner/PowerDoughnut-banner.png'
+import MeaoPancakeDocs from '../../assets/shop/Document/MeaoPancakeDocs.pdf'
 
 /* Javascript */
 import { CheckNext, ConfirmWebhook, sendWebhook } from '../javascript/SubmitPancake'
@@ -42,12 +43,16 @@ function Pancake() {
     GoTop();
   };
 
+  const GoToDocs = () => {
+    window.location.href = MeaoPancakeDocs;
+  };
+
   const Typing = React.useRef(null);
   const [TextTranindex, setTextTranindex] = React.useState(0);
 
   React.useEffect(() => {
     console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nProject : Meao Pancake\nFont : MN Manao Dong (f0nt.com)\n© Copyright 2023-2024 (shop.fujaTyping.dev) all rights reserved");
-    //document.getElementById('Notice').showModal()
+    document.getElementById('Notice').showModal()
 
     const typed = new Typed(Typing.current, {
       strings: ['เราทำ " แพนเค้ก "', 'เราทำ " โดนัท "', '" แพนเค้ก และ โดนัท " โฮมเมด ทำสดใหม่ทุกวัน !', 'อร่อยไม่เหมือนใคร และ ไม่มีใครอยากเหมือน :D'],
@@ -86,7 +91,7 @@ function Pancake() {
         <div className="hero min-h-screen bg-base-100 Headder animate__animated animate__fadeIn animate__delay-0.5s">
           <div className="hero-content text-center">
             <div className="max-w-md">
-              <div className="avatar online">
+              <div className="avatar offline">
                 <div style={{ width: '230px', height: '230px' }} className="w-24">
                   <img src={Logo} />
                 </div>
@@ -94,12 +99,12 @@ function Pancake() {
               <h1 className="text-5xl font-bold Itimfont"><thai>Meao</thai> <TextTransition inline={true} springConfig={presets.wobbly}><thai>{TextTran[TextTranindex % TextTran.length]}</thai></TextTransition></h1>
               <p className="py-6 Itimfont">แพนเค้ก " Meao แพนเค้ก " แพนเค้กโฮมเมด อบสดใหม่ทุกวัน ให้คุณได้สัมผัสรสชาติที่หอมกรุ่น อร่อยไม่เหมือนใคร แพนเค้กที่ถูกใจทุกคน สั่งเลยวันนี้</p>
               <div className="join join-vertical lg:join-horizontal">
-                <a href='#ShopingForm' className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                <a disabled="disabled" href='#ShopingForm' className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   shopping_bag
                 </span>สั่งชื้อ คลิกเลย !</a>
-                <button onClick={() => document.getElementById('contract').showModal()} className="btn btn-neutral join-item Itimfont"><span className="material-symbols-outlined Gicon">
-                  support_agent
-                </span>ติดต่อ</button>
+                <button onClick={GoToDocs} className="btn btn-neutral join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                  description
+                </span>ผลการศึกษา</button>
                 <a href='#About' className="btn btn-neutral join-item Itimfont"><span className="material-symbols-outlined Gicon">
                   storefront
                 </span>เกี่ยวกับโครงงาน</a>
@@ -216,7 +221,7 @@ function Pancake() {
                   </div>
                 </div>
                 <div className="form-control mt-6">
-                  <button id='NextBT' onClick={handleNext} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                  <button id='NextBT' disabled="disabled" onClick={handleNext} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                     start
                   </span>ถัดไป</button>
                   <div id='GSubmit' style={{ display: 'none' }} className="join join-vertical">
@@ -226,7 +231,7 @@ function Pancake() {
                     <button id='SpacialPong' style={{ display: 'none' }} onClick={() => document.getElementById('Spacial').showModal()} className="btn btn-secondary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       nutrition
                     </span>ผง เพิ่มเติม</button>
-                    <button onClick={handleConfirmSubmit} className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
+                    <button onClick={handleConfirmSubmit} disabled="disabled" className="btn btn-primary join-item Itimfont"><span className="material-symbols-outlined Gicon">
                       shopping_basket
                     </span>ส่งคำสั่งชื้อ</button>
                   </div>
@@ -305,7 +310,7 @@ function Pancake() {
               โครงงาน - Meao แพนเค้ก <br />โรงเรียน หาดใหญ่วิทยาลัย<br />โครงงานเป็นส่วนหนึ่งของวิชาการงานอาชีพ (ง23102)
             </p>
             <p className='Itimfont'>ลิขสิทธิ์ © 2566 - 2567 | สงวนลิขสิทธิ์ทั้งหมด</p>
-            <button data-tally-open="3qRl52" data-tally-emoji-animation="none" data-tally-auto-close="5000" className="btn btn-secondary Itimfont" ><span className="material-symbols-outlined Gicon">
+            <button disabled="disabled" data-tally-open="3qRl52" data-tally-emoji-animation="none" data-tally-auto-close="5000" className="btn btn-secondary Itimfont" ><span className="material-symbols-outlined Gicon">
               query_stats
             </span>แบบสอบถามความพึงพอใจ</button>
           </aside>
@@ -425,11 +430,12 @@ function Pancake() {
         </dialog>
         <dialog id="Notice" className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg Itimfont">การไม่รองรับการตอบกลับจาก Ig (Instagram) อีกต่อไป</h3>
-            <p className="py-4 Itimfont">เรียน ลูกค้า Meao แพนเค้ก ทุกท่าน<br /><br />เนี่องด้วยทางร้าน Meao แพนเค้ก พบว่า ลูกค้าบางท่านให้ช่องทางติดต่อกลับทาง Instagram มักไม่ตอบกลับข้อความของทางร้านเป็นเวลานาน ส่งผลให้ทางร้านไม่สามารถให้บริการลูกค้าได้อย่างมีประสิทธิภาพ ทาง Meao แพนเค้ก จึงขอแจ้งให้ทราบถึงการเปลี่ยนแปลง<br /><br /><b className='Itimfont'>** ตั้งแต่วันที่ 15 มกราคม 2567 เป็นต้นไป **</b></p>
+            <h3 className="font-bold text-lg Itimfont">ขอบคุณที่สนับสนุนร้าน Meao แพนเค้ก</h3>
+            <p className="py-4 Itimfont">เรียน ลูกค้า Meao แพนเค้ก ทุกท่าน<br /><br />ด้วยความขอบคุณอย่างสุดซึ้ง ทางร้านขอแจ้งให้ทราบว่า ร้านของเราจะปิดให้บริการอย่างเป็นทางการ ตั้งแต่วันที่ 1 กุมภาพันธ์ 2567 เป็นต้นไป<br /><br /><b className='Itimfont'>ทางร้านรู้สึกขอบคุณลูกค้าทุกท่าน ที่ให้การสนับสนุนและอุดหนุนสินค้าของเราตลอดมา  ทางเราหวังว่าจะได้มีโอกาสให้บริการท่านอีกครั้งในอนาคต</b></p>
             <div className="modal-action">
+              <a onClick={GoToDocs} className="btn btn-primary Itimfont">ดูผลการศึกษา</a>
               <form method="dialog">
-                <button className="btn Itimfont">โอเค</button>
+                <button className="btn Itimfont">เข้าใจแล้ว</button>
               </form>
             </div>
           </div>
