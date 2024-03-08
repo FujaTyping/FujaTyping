@@ -12,7 +12,7 @@ import Projects from './components/Projects'
 import Dialog from './components/Dialog'
 
 /* Assets */
-import icon from './assets/icon.png'
+import icon from './assets/fav.png'
 import dividerSec from './assets/Quote-divider.png'
 
 function Home() {
@@ -43,7 +43,7 @@ function Home() {
                         <h1 className="text-5xl font-bold title"><RandomReveal isPlaying duration={3} characters="Siraphop Sukchu" /></h1>
                         <p className="py-6">Hi ! , I'm <b>Siraphop Sukchu</b> you can simply call me <b>Fujatyping</b></p>
                         <div className="join">
-                            <a href='https://project.fujatyping.dev/' className="btn join-item btn-outline btn-primary"><span className="material-symbols-outlined">tactic</span>My project</a>
+                            <a href='https://project.siraphop.me/' className="btn join-item btn-outline btn-primary"><span className="material-symbols-outlined">tactic</span>My project</a>
                             <button onClick={() => document.getElementById('contract-model').showModal()} className="btn join-item btn-neutral"><span className="material-symbols-outlined">deskphone</span>Contract me</button>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ function Projects() {
           <h2 className="card-title"><b>Meao แพนเค้ก</b> <div class="badge badge-primary">Web development</div></h2>
           <p className='card-details' >แพนเค้ก " Meao แพนเค้ก " แพนเค้กโฮมเมด อบสดใหม่ทุกวัน ให้คุณได้สัมผัสรสชาติที่หอมกรุ่น อร่อยไม่เหมือนใคร</p>
           <div className="card-actions justify-end">
-            <a href='https://shop.fujatyping.dev/pancake' className="btn btn-primary">View project page <span className="material-symbols-outlined">captive_portal</span></a>
+            <a href='https://shop.siraphop.me/pancake' className="btn btn-primary">View project page <span className="material-symbols-outlined">captive_portal</span></a>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@ function Projects() {
           <h2 className="card-title"><b>Yw64Sl10-Project</b> <div class="badge badge-primary">Web development</div></h2>
           <p className='card-details' >Web App ของ ห้อง 3/10! โครงการโอเพ่นซอร์สนี้ออกแบบมาเพื่อมอบแพลตฟอร์มที่สะดวกและมีประสิทธิภาพสำหรับการจัดการกิจกรรมในชั้นเรียน</p>
           <div className="card-actions justify-end">
-            <a href='https://yorwor.fujatyping.dev/about/webapp' className="btn btn-primary">View project page <span className="material-symbols-outlined">captive_portal</span></a>
+            <a href='https://talent.siraphop.me/about/webapp' className="btn btn-primary">View project page <span className="material-symbols-outlined">captive_portal</span></a>
           </div>
         </div>
       </div>

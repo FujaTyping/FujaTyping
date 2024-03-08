@@ -12,8 +12,8 @@ function Index() {
           <div className="hero-content text-center">
             <div className="max-w-md">
               <h1 className="text-5x1 font-bold title">Welcome to shop Index</h1>
-              <p className="py-6">You're visiting the site without an shop name, Please check the url again <span className="badge badge-primary">shop.fujatyping.dev/{Shopplaceholder}</span></p>
-              <a href='https://fujatyping.dev/' className="btn btn-primary"><span className="material-symbols-outlined Gicon">
+              <p className="py-6">You're visiting the site without an shop name, Please check the url again <span className="badge badge-primary">shop.siraphop.me/{Shopplaceholder}</span></p>
+              <a href='https://siraphop.me/' className="btn btn-primary"><span className="material-symbols-outlined Gicon">
                 home
               </span>Home page</a>
             </div>
