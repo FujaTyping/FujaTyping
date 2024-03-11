@@ -20,10 +20,14 @@ jobs:
           user: fujatyping
           plugin_activity: yes
           plugin_activity_limit: 5
+          
           plugin_languages: yes
           plugin_languages_indepth: yes
+          
           plugin_achievements: yes
+          plugin_achievements_display: compact
+          
           plugin_anilist: yes
           plugin_anilist_sections: characters
-          plugin_anilist_limit_characters: 16
+          plugin_anilist_limit_characters: 12
           
