@@ -50,7 +50,11 @@ function Pancake() {
   const Typing = React.useRef(null);
   const [TextTranindex, setTextTranindex] = React.useState(0);
 
+  var favicon = document.getElementById('favicon');
+
   React.useEffect(() => {
+    document.title = "Meao แพนเค้ก | Shop";
+    favicon.href = '/favicon/pancake.ico';
     console.log(" __       __  _______  \n/  \\     /  |/       \\\n$$  \\   /$$ |$$$$$$$  |\n$$$  \\ /$$$ |$$ |__$$ |\n$$$$  /$$$$ |$$    $$// \n$$ $$ $$/$$ |$$$$$$$/  \n$$ |$$$/ $$ |$$ |       \n$$ | $/  $$ |$$ |       \n$$/      $$/ $$/\n\nProject : Meao Pancake\nFont : MN Manao Dong (f0nt.com)\n© Copyright 2023-2024 (shop.fujaTyping.dev) all rights reserved");
     document.getElementById('Notice').showModal()
 
