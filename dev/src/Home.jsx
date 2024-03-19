@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Dialog from './components/Dialog'
+import Education from './components/Education'
 
 /* Assets */
 import icon from './assets/fav.png'
@@ -56,6 +57,19 @@ function Home() {
                         <div style={{ marginTop: "30px" }}>
                             <div className="grid grid-cols-4 gap-4">
                                 <Skills />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="hero bg-base-200 content Educationner">
+                <div className="hero-content text-center">
+                    <div className="max-w-md">
+                        <h1 style={{ textAlign: "left" }} className="text-5x1 font-bold title">Education</h1>
+                        <p style={{ textAlign: "left" }} > การศึกษา</p>
+                        <div style={{ marginTop: "10px" }}>
+                            <div className="hero-content flex-col lg:flex-row">
+                                <Education />
                             </div>
                         </div>
                     </div>

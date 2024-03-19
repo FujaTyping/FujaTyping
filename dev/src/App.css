@@ -45,6 +45,13 @@ html {
     background-size: cover;
 }
 
+.Educationner {
+    background-image: url('./assets/background/School-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .title {
     font-family: Anton !important;
     font-size: 45px !important;
@@ -71,4 +78,8 @@ html {
 
 .card-details {
     text-align: left;
+}
+
+.textcen {
+    text-align: center !important;
 }
