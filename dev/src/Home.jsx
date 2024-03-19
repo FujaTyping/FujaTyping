@@ -67,8 +67,8 @@ function Home() {
                     <div className="max-w-md">
                         <h1 style={{ textAlign: "left" }} className="text-5x1 font-bold title">Education</h1>
                         <p style={{ textAlign: "left" }} > การศึกษา</p>
-                        <div style={{ marginTop: "10px" }}>
-                            <div className="hero-content flex-col lg:flex-row">
+                        <div style={{ marginTop: "30px" }}>
+                            <div className="flex flex-col gap-4 lg:flex-row">
                                 <Education />
                             </div>
                         </div>
