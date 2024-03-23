@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="1510" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="1194" class="">
     <defs>
         <style/>
     </defs>
@@ -43,7 +43,7 @@
                                     <rect class="day" x="150" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
                                     <rect class="day" x="165" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
                                     <rect class="day" x="180" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
-                                    <rect class="day" x="195" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
+                                    <rect class="day" x="195" y="0" width="11" height="11" fill="#40c463" rx="2" ry="2"/>
                                 </g>
                             </svg>
                         </div>
@@ -69,7 +69,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            477 Commits
+                            479 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -275,6 +275,26 @@
                                         <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                                     </svg>
                                     <div class="content">
+                                        Pushed 2 commits in
+                                        <span class="repo">FujaTyping/FujaTyping</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>on branch <span class="code">main</span></div>
+                                    <div class="commit">
+                                        <div class="sha">#9a9163a</div>
+                                        <div class="message">Merge branch 'main' of https://github.com/FujaTyping/FujaTyping</div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
+                                    </svg>
+                                    <div class="content">
                                         Pushed 1 commit in
                                         <span class="repo">FujaTyping/FujaTyping</span>
                                     </div>
@@ -345,106 +365,6 @@
                                     <div class="commit">
                                         <div class="sha">#b9ee209</div>
                                         <div class="message">yes</div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Pushed 55 commits in
-                                        <span class="repo">FujaTyping/RoSeal-but-in-Thai</span>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div>on branch <span class="code">main</span></div>
-                                    <div class="commit">
-                                        <div class="sha">#0c008a0</div>
-                                        <div class="message">Apply automatic changes</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#c733855</div>
-                                        <div class="message">Merge branch 'main' of https://github.com/RoSeal-Extension/I18n</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#bd09e69</div>
-                                        <div class="message">moment</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#b0ccc5d</div>
-                                        <div class="message">Apply automatic changes</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#ffdc3ee</div>
-                                        <div class="message">Merge branch 'main' of https://github.com/RoSeal-Extension/I18n</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#6f2bc00</div>
-                                        <div class="message"></div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#79ed2e9</div>
-                                        <div class="message">upd</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#43e5353</div>
-                                        <div class="message">Update messages.jsonc
-
-Added More Translated Text, En To Es</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#bf12c7e</div>
-                                        <div class="message">Apply automatic changes</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#6860c7f</div>
-                                        <div class="message">Merge branch 'main' of https://github.com/RoSeal-Extension/I18n</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#20f38c0</div>
-                                        <div class="message">another</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#6c82c0f</div>
-                                        <div class="message">Apply automatic changes</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#d9237cd</div>
-                                        <div class="message">Merge pull request #80 from Flaryanlxrd/patch-12
-
-Fixed typos + New strings [ru-ru]</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#a7149a0</div>
-                                        <div class="message">Merge branch 'main' into patch-12</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#4c9b05f</div>
-                                        <div class="message">Better Experiences List</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#27db138</div>
-                                        <div class="message">again</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#957a631</div>
-                                        <div class="message">Merge branch 'main' into patch-12</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#e345ac8</div>
-                                        <div class="message">i guess is supposed to be</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#08917cc</div>
-                                        <div class="message">random spaces</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#55f149f</div>
-                                        <div class="message">Fixed typos + New strings [RU-RU]</div>
                                     </div>
                                 </div>
                             </section>
@@ -685,7 +605,7 @@ Fixed typos + New strings [ru-ru]</div>
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="16.35678391959799 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="17.1356783919598 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g stroke-width="2" fill="none" fill-rule="evenodd">
@@ -707,10 +627,10 @@ Fixed typos + New strings [ru-ru]</div>
                                     <span class="prefix"></span>
                                     Deployer
                                     <div class="value-wrapper">
-                                        <div class="value">22</div>
+                                        <div class="value">23</div>
                                     </div>
                                 </div>
-                                <div class="text">Repositories have been deployed 22 times</div>
+                                <div class="text">Repositories have been deployed 23 times</div>
                             </div>
                         </div>
                         <div class="achievement c largeable-width-half">
@@ -998,7 +918,7 @@ Fixed typos + New strings [ru-ru]</div>
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 5.19m out of 88.9m repositories</span>
+                                    <span class="gh">ranked 5.19m out of 78.6m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">1</div>
                                     </div>
@@ -1056,7 +976,7 @@ Fixed typos + New strings [ru-ru]</div>
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 23 Mar 2024, 06:36:11  with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 23 Mar 2024, 07:01:47  with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
