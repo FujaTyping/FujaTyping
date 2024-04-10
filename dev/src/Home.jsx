@@ -42,7 +42,7 @@ function Home() {
                     <img src={icon} className="max-w-sm shadow-2xl rounded-full profile" /><br />
                     <div>
                         <h1 className="text-5xl font-bold title"><RandomReveal isPlaying duration={3} characters="Siraphop Sukchu" /></h1>
-                        <p className="py-6">Hi ! , I'm <b>Siraphop Sukchu</b> you can simply call me <b>Fujatyping</b></p>
+                        <p className="py-6">Hi ! , I'm <b>Siraphop Sukchu</b> you can call me <b>Fujatyping</b><br /><b>3D Modeler / Thai translate / Web developer / Roblox scripter</b></p>
                         <div className="join">
                             <a href='https://project.siraphop.me/' className="btn join-item btn-outline btn-primary"><span className="material-symbols-outlined">tactic</span>My project</a>
                             <button onClick={() => document.getElementById('contract-model').showModal()} className="btn join-item btn-neutral"><span className="material-symbols-outlined">deskphone</span>Contract me</button>
@@ -79,7 +79,7 @@ function Home() {
                 <div className="hero-content text-center">
                     <div className="max-w-md">
                         <h1 style={{ textAlign: "left" }} className="text-5x1 font-bold title">Featured projects</h1>
-                        <p style={{ textAlign: "left" }} > Here is some my project</p>
+                        <p style={{ textAlign: "left" }} > Here is some my project <a href='https://project.siraphop.me/' className="badge badge-primary">View more project</a></p>
                         <div style={{ marginTop: "30px" }}>
                             <Projects />
                         </div>

@@ -9,6 +9,7 @@ import Nodejs from '../assets/Icon/Nodejs.svg'
 import Firebase from '../assets/Icon/Firebase.svg'
 import Css from '../assets/Icon/Css.svg'
 import Html from '../assets/Icon/Html.svg'
+import LuaLang from '../assets/Icon/Lua.png'
 
 function Skills() {
     return (
@@ -35,22 +36,17 @@ function Skills() {
             </div>
             <div className="avatar skill">
                 <div className="w-16">
-                    <img src={Nodejs} />
-                </div>
-            </div>
-            <div className="avatar skill">
-                <div className="w-16">
-                    <img src={Firebase} />
-                </div>
-            </div>
-            <div className="avatar skill">
-                <div className="w-16">
                     <img src={Css} />
                 </div>
             </div>
             <div style={{ marginBottom: "10px" }} className="avatar">
                 <div className="w-16">
                     <img src={Html} />
+                </div>
+            </div>
+            <div style={{ marginBottom: "10px" }} className="avatar">
+                <div className="w-16">
+                    <img src={LuaLang} />
                 </div>
             </div>
         </>
