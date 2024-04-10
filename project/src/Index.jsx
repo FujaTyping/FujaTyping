@@ -7,6 +7,7 @@ import Project from './components/Project'
 
 /* Assets */
 import githubIcon from './assets/Icon/Github.svg'
+import divier from './assets/project-divider.png'
 
 function Index() {
   return (
@@ -22,6 +23,20 @@ function Index() {
                   home
                 </span>Home page</a>
                 <a href='https://github.com/FujaTyping' className="btn btn-accent join-item"><img src={githubIcon} />My project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img style={{ width: "100%" }} src={divier}></img>
+        <div style={{ color: "white" }} className="hero min-h-screen bg-secondary quoter">
+          <div className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 style={{ textAlign: "left" }} className="text-5x1 font-bold title">More featured projects</h1>
+              <p style={{ textAlign: "left" }} > Here is some my other project</p>
+              <div style={{ marginTop: "30px" }}>
+                <div style={{ color: 'black' }} className="flex flex-col gap-4 lg:flex-row">
+                  <Project />
+                </div>
               </div>
             </div>
           </div>
