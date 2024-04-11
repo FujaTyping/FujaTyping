@@ -32,3 +32,10 @@ html {
     background-position: center;
     background-size: cover;
 }
+
+.Projecter {
+    background-image: url('./assets/background/Project-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

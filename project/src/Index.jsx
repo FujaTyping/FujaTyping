@@ -28,14 +28,16 @@ function Index() {
           </div>
         </div>
         <img style={{ width: "100%" }} src={divier}></img>
-        <div style={{ color: "white" }} className="hero min-h-screen bg-secondary quoter">
+        <div style={{ color: "white" }} className="hero min-h-screen bg-secondary Projecter">
           <div className="hero-content text-center">
             <div className="max-w-md">
               <h1 style={{ textAlign: "left" }} className="text-5x1 font-bold title">More featured projects</h1>
               <p style={{ textAlign: "left" }} > Here is some my other project</p>
               <div style={{ marginTop: "30px" }}>
-                <div style={{ color: 'black' }} className="flex flex-col gap-4 lg:flex-row">
-                  <Project />
+                <Project />
+                <br />
+                <div className="join">
+                  <button className="join-item btn btn-active">1</button>
                 </div>
               </div>
             </div>
