@@ -2,7 +2,7 @@ import React from 'react'
 
 /* Assets */
 import Pancake from '../assets/Screenshot/Pancake.png'
-import Roseal from '../assets/Screenshot/i18n.webp'
+import Futami from '../assets/Screenshot/Futami.png'
 import Yw64 from '../assets/Screenshot/Yw64Sl10.png'
 
 function Projects() {
@@ -19,12 +19,12 @@ function Projects() {
         </div>
       </div>
       <div className="card w-50 bg-base-100 shadow-xl projects">
-        <figure><img src={Roseal} alt="Shoes" /></figure>
+        <figure><img src={Futami} alt="Shoes" /></figure>
         <div className="card-body">
-          <h2 className="card-title"><b>RoSeal i18n</b> <div class="badge badge-primary">Translate</div> <span class="badge badge-primary">Contributor</span></h2>
-          <p className='card-details' >RoSeal internationalization (i18n)</p>
+          <h2 className="card-title"><b>Futami</b> <div class="badge badge-primary">Discord bot dev</div></h2>
+          <p className='card-details' > Imagine music bot (I'm working on in my free time)</p>
           <div className="card-actions justify-end">
-            <a href='https://github.com/FujaTyping/RoSeal-but-in-Thai' className="btn btn-primary">View project page <span className="material-symbols-outlined">captive_portal</span></a>
+            <a href='https://futami.siraphop.me/' className="btn btn-primary">View project page <span className="material-symbols-outlined">captive_portal</span></a>
           </div>
         </div>
       </div>
