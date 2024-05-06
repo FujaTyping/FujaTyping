@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /assets
-Sitemap: https://siraphop.me/sitemap.xml
